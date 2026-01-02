@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import PageHeader from "./shared/PageHeader";
 import Footer from "./shared/Footer";
+import Pagination from "./shared/Pagination";
 
 interface Expense {
   id: string;
@@ -57,9 +58,9 @@ export default function VerifiedExpensesDetailedView({ expense, onClose, onNavig
         />
 
         {/* Main Content */}
-        <div className="max-w-[1200px] mx-auto px-6 py-[40px]">
+        <div className="max-w-[1200px] mx-auto px-4 lg:px-6 py-6 lg:py-[40px]">
           {/* Back Button */}
-          <button onClick={onClose} className="flex items-center gap-[8px] mb-[32px] cursor-pointer hover:opacity-70 transition-opacity">
+          <button onClick={onClose} className="flex items-center gap-[8px] mb-6 lg:mb-[32px] cursor-pointer hover:opacity-70 transition-opacity">
             <svg className="size-[20px]" fill="none" viewBox="0 0 20 20">
               <circle cx="10" cy="10" r="9" fill="#0f172b" />
               <path d="M12 14l-4-4 4-4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -67,56 +68,56 @@ export default function VerifiedExpensesDetailedView({ expense, onClose, onNavig
             <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[14px]">Back</p>
           </button>
 
-          <h1 className="font-['Source_Sans_3:Bold',sans-serif] text-[#0f172b] text-[36px] mb-[40px] uppercase">Expense Breakdown</h1>
+          <h1 className="font-['Source_Sans_3:Bold',sans-serif] text-[#0f172b] text-[24px] lg:text-[36px] mb-6 lg:mb-[40px] uppercase">Expense Breakdown</h1>
 
           {/* Expense Summary Card */}
-          <div className="bg-white rounded-[14px] shadow-sm border border-[#e2e8f0] p-[32px] mb-[32px]">
-            <h2 className="font-['Source_Sans_3:Medium',sans-serif] text-[#0f172b] text-[24px] mb-[4px]">{expense.title}</h2>
-            <div className="flex gap-[12px] items-center mb-[24px]">
-              <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#45556c] text-[14px]">Origin: {expense.origin}</p>
-              <p className="text-[#45556c]">•</p>
-              <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#45556c] text-[14px]">Published: {expense.publishDate}</p>
+          <div className="bg-white rounded-[14px] shadow-sm border border-[#e2e8f0] p-4 lg:p-[32px] mb-6 lg:mb-[32px]">
+            <h2 className="font-['Source_Sans_3:Medium',sans-serif] text-[#0f172b] text-[18px] lg:text-[24px] mb-[4px]">{expense.title}</h2>
+            <div className="flex flex-col lg:flex-row lg:gap-[12px] lg:items-center gap-1 mb-4 lg:mb-[24px]">
+              <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#45556c] text-[12px] lg:text-[14px]">Origin: {expense.origin}</p>
+              <p className="text-[#45556c] hidden lg:block">•</p>
+              <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#45556c] text-[12px] lg:text-[14px]">Published: {expense.publishDate}</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-[24px]">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-[24px]">
               <div>
-                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#62748e] text-[14px] mb-[8px] tracking-wide">
+                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#62748e] text-[12px] lg:text-[14px] mb-[8px] tracking-wide">
                   Line Item Information
                 </p>
-                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[14px] mb-1">
+                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[12px] lg:text-[14px] mb-1">
                   ID: {expense.lineItemId}
                 </p>
-                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[14px] mb-1">
+                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[12px] lg:text-[14px] mb-1">
                   Area of Participation: {expense.areaOfParticipation}
                 </p>
-                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[14px]">
+                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[12px] lg:text-[14px]">
                   Budget: {expense.budget}
                 </p>
               </div>
               <div>
-                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#62748e] text-[14px] mb-[8px]  tracking-wide">
+                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#62748e] text-[12px] lg:text-[14px] mb-[8px]  tracking-wide">
                   Total Amount Spent
                 </p>
-                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[14px]">
+                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[12px] lg:text-[14px]">
                   {expense.totalAmountSpent}
                 </p>
               </div>
               <div>
-                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#62748e] text-[14px] mb-[8px] tracking-wide">
+                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#62748e] text-[12px] lg:text-[14px] mb-[8px] tracking-wide">
                   Expenditure Period
                 </p>
-                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[14px] mb-1">
+                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[12px] lg:text-[14px] mb-1">
                   From: {expense.fromDate}
                 </p>
-                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[14px]">
+                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[12px] lg:text-[14px]">
                   To: {expense.toDate}
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Table Container */}
-          <div className="bg-white rounded-[14px] border border-[#e2e8f0] overflow-hidden mb-[32px]">
+          {/* Table Container - Desktop */}
+          <div className="hidden lg:block bg-white rounded-[14px] border border-[#e2e8f0] overflow-hidden mb-[32px]">
             <div className="grid grid-cols-[2fr_1fr_1fr_100px] gap-[24px] px-[32px] py-[16px] border-b border-[#e2e8f0] bg-[#f8fafc]">
               <p className="font-['Source_Sans_3:Bold',sans-serif] text-[14px]">Particulars</p>
               <p className="font-['Source_Sans_3:Bold',sans-serif] text-[14px]">Amount</p>
@@ -141,19 +142,49 @@ export default function VerifiedExpensesDetailedView({ expense, onClose, onNavig
             ))}
           </div>
 
+          {/* Mobile Card List - Mobile */}
+          <div className="lg:hidden flex flex-col gap-4 mb-6">
+            {expenseBreakdown.map((item, index) => (
+              <div key={index} className="bg-white rounded-[14px] border border-[#e2e8f0] p-4">
+                <p className="font-['Source_Sans_3:Bold',sans-serif] text-[12px] text-[#62748e] mb-2">Particulars</p>
+                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[14px] text-[#0f172b] mb-3">{item.particulars}</p>
+                
+                <div className="grid grid-cols-2 gap-3 mb-3">
+                  <div>
+                    <p className="font-['Source_Sans_3:Bold',sans-serif] text-[12px] text-[#62748e] mb-1">Amount</p>
+                    <p className="font-['Source_Sans_3:Regular',sans-serif] text-[14px] text-[#0f172b]">{item.amount}</p>
+                  </div>
+                  <div>
+                    <p className="font-['Source_Sans_3:Bold',sans-serif] text-[12px] text-[#62748e] mb-1">Date</p>
+                    <p className="font-['Source_Sans_3:Regular',sans-serif] text-[14px] text-[#0f172b]">{item.date}</p>
+                  </div>
+                </div>
+
+                <button className="w-full flex items-center justify-center gap-2 py-2 border border-[#e2e8f0] rounded-[8px] hover:bg-[#f8fafc] transition-colors">
+                  <svg className="size-[18px]" fill="none" viewBox="0 0 16 16">
+                    <path d="M14 10V13.3333C14 13.687 13.8595 14.0261 13.6095 14.2761C13.3594 14.5262 13.0203 14.6667 12.6667 14.6667H3.33333C2.97971 14.6667 2.64057 14.5262 2.39052 14.2761C2.14048 14.0261 2 13.687 2 13.3333V10" stroke="#4A5565" strokeWidth="1.33333" />
+                    <path d="M5.33333 6.66667L8 4L10.6667 6.66667" stroke="#4A5565" strokeWidth="1.33333" />
+                  </svg>
+                  <p className="font-['Source_Sans_3:Regular',sans-serif] text-[14px] text-[#4A5565]">View Attachment</p>
+                </button>
+              </div>
+            ))}
+          </div>
+
           {/* Totals Section */}
-          <div className="flex flex-col gap-[16px] max-w-[400px] ml-auto mb-[60px]">
-            <div className="bg-white rounded-[14px] shadow-sm border border-[#e2e8f0] px-[24px] py-[16px] flex items-center justify-between">
-              <p className="font-['Source_Sans_3:Bold',sans-serif] text-[#0f172b]">Budget:</p>
-              <p className="font-['Source_Sans_3:Bold',sans-serif] text-[#0f172b] text-[20px]">{expense.budget}</p>
+          <div className="flex flex-col gap-4 lg:gap-[16px] max-w-full lg:max-w-[400px] lg:ml-auto mb-10 lg:mb-[60px]">
+            <div className="bg-white rounded-[14px] shadow-sm border border-[#e2e8f0] px-4 lg:px-[24px] py-3 lg:py-[16px] flex items-center justify-between">
+              <p className="font-['Source_Sans_3:Bold',sans-serif] text-[#0f172b] text-[14px] lg:text-[16px]">Budget:</p>
+              <p className="font-['Source_Sans_3:Bold',sans-serif] text-[#0f172b] text-[16px] lg:text-[20px]">{expense.budget}</p>
             </div>
-            <div className="bg-white rounded-[14px] shadow-sm border border-[#e2e8f0] px-[24px] py-[16px] flex items-center justify-between">
-              <p className="font-['Source_Sans_3:Bold',sans-serif] text-[#0f172b]">Total Spent:</p>
-              <p className="font-['Source_Sans_3:Bold',sans-serif] text-[#0f172b] text-[20px]">{expense.totalAmountSpent}</p>
+            <div className="bg-white rounded-[14px] shadow-sm border border-[#e2e8f0] px-4 lg:px-[24px] py-3 lg:py-[16px] flex items-center justify-between">
+              <p className="font-['Source_Sans_3:Bold',sans-serif] text-[#0f172b] text-[14px] lg:text-[16px]">Total Spent:</p>
+              <p className="font-['Source_Sans_3:Bold',sans-serif] text-[#0f172b] text-[16px] lg:text-[20px]">{expense.totalAmountSpent}</p>
             </div>
           </div>
         </div>
 
+        <Pagination />
         <Footer />
       </div>
     </div>
