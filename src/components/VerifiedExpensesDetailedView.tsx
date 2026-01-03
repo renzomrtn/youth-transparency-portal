@@ -1,34 +1,14 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import PageHeader from "./shared/PageHeader";
 import Footer from "./shared/Footer";
 import Pagination from "./shared/Pagination";
-
-interface Expense {
-  id: string;
-  title: string;
-  origin: string;
-  publishDate: string;
-  lineItemId: string;
-  areaOfParticipation: string;
-  budget: string;
-  totalAmountSpent: string;
-  fromDate: string;
-  toDate: string;
-}
+import { ExpenseItem } from "../contexts/ExpenseVerificationContext";
 
 interface VerifiedExpensesDetailedViewProps {
-  expense: Expense;
+  expense: ExpenseItem;
   onClose: () => void;
   onNavigate: (page: "home" | "verified-expenses" | "line-items" | "archives") => void;
 }
-
-const expenseBreakdown = [
-  { particulars: "Venue Rental (1-day seminar)", amount: "₱12,000.00", date: "September 1, 2025" },
-  { particulars: "Meals and Snacks for Participants (80 pax)", amount: "₱15,000.00", date: "September 1, 2025" },
-  { particulars: "Honorarium for Speaker / Resource Person", amount: "₱8,000.00", date: "September 1, 2025" },
-  { particulars: "Seminar Kits (IDs, pens, notebooks, folders)", amount: "₱11,000.00", date: "September 1, 2025" },
-  { particulars: "IEC Materials Printing (Tarpaulin, flyers, posters)", amount: "₱9,555.56", date: "September 1, 2025" }
-];
 
 export default function VerifiedExpensesDetailedView({ expense, onClose, onNavigate }: VerifiedExpensesDetailedViewProps) {
   
@@ -45,6 +25,19 @@ export default function VerifiedExpensesDetailedView({ expense, onClose, onNavig
     onClose();
     onNavigate(page);
   };
+
+  // Format currency
+  const formatCurrency = (amount: number) => {
+    return `₱${amount.toLocaleString('en-PH', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+  };
+
+  // Format date
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  };
+
+  const particulars = expense.particulars || [];
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-start justify-center z-[100]">
@@ -72,11 +65,11 @@ export default function VerifiedExpensesDetailedView({ expense, onClose, onNavig
 
           {/* Expense Summary Card */}
           <div className="bg-white rounded-[14px] shadow-sm border border-[#e2e8f0] p-4 lg:p-[32px] mb-6 lg:mb-[32px]">
-            <h2 className="font-['Source_Sans_3:Medium',sans-serif] text-[#0f172b] text-[18px] lg:text-[24px] mb-[4px]">{expense.title}</h2>
+            <h2 className="font-['Source_Sans_3:Medium',sans-serif] text-[#0f172b] text-[18px] lg:text-[24px] mb-[4px]">{expense.lineItem}</h2>
             <div className="flex flex-col lg:flex-row lg:gap-[12px] lg:items-center gap-1 mb-4 lg:mb-[24px]">
-              <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#45556c] text-[12px] lg:text-[14px]">Origin: {expense.origin}</p>
+              <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#45556c] text-[12px] lg:text-[14px]">Submitted by: {expense.submittedBy}</p>
               <p className="text-[#45556c] hidden lg:block">•</p>
-              <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#45556c] text-[12px] lg:text-[14px]">Published: {expense.publishDate}</p>
+              <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#45556c] text-[12px] lg:text-[14px]">Updated: {formatDate(expense.updatedAt || expense.createdAt || '')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-[24px]">
@@ -91,15 +84,15 @@ export default function VerifiedExpensesDetailedView({ expense, onClose, onNavig
                   Area of Participation: {expense.areaOfParticipation}
                 </p>
                 <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[12px] lg:text-[14px]">
-                  Budget: {expense.budget}
+                  Budget: {formatCurrency(expense.budget)}
                 </p>
               </div>
               <div>
-                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#62748e] text-[12px] lg:text-[14px] mb-[8px]  tracking-wide">
+                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#62748e] text-[12px] lg:text-[14px] mb-[8px] tracking-wide">
                   Total Amount Spent
                 </p>
                 <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[12px] lg:text-[14px]">
-                  {expense.totalAmountSpent}
+                  {formatCurrency(expense.totalAmountSpent)}
                 </p>
               </div>
               <div>
@@ -107,79 +100,99 @@ export default function VerifiedExpensesDetailedView({ expense, onClose, onNavig
                   Expenditure Period
                 </p>
                 <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[12px] lg:text-[14px] mb-1">
-                  From: {expense.fromDate}
+                  From: {formatDate(expense.fromDate)}
                 </p>
                 <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[12px] lg:text-[14px]">
-                  To: {expense.toDate}
+                  To: {formatDate(expense.toDate)}
                 </p>
               </div>
             </div>
           </div>
 
           {/* Table Container - Desktop */}
-          <div className="hidden lg:block bg-white rounded-[14px] border border-[#e2e8f0] overflow-hidden mb-[32px]">
-            <div className="grid grid-cols-[2fr_1fr_1fr_100px] gap-[24px] px-[32px] py-[16px] border-b border-[#e2e8f0] bg-[#f8fafc]">
-              <p className="font-['Source_Sans_3:Bold',sans-serif] text-[14px]">Particulars</p>
-              <p className="font-['Source_Sans_3:Bold',sans-serif] text-[14px]">Amount</p>
-              <p className="font-['Source_Sans_3:Bold',sans-serif] text-[14px]">Date of Expense</p>
-              <p className="font-['Source_Sans_3:Bold',sans-serif] text-[14px] text-center">Attachment</p>
+          {particulars.length > 0 ? (
+            <>
+              <div className="hidden lg:block bg-white rounded-[14px] border border-[#e2e8f0] overflow-hidden mb-[32px]">
+                <div className="grid grid-cols-[2fr_1fr_1fr_100px] gap-[24px] px-[32px] py-[16px] border-b border-[#e2e8f0] bg-[#f8fafc]">
+                  <p className="font-['Source_Sans_3:Bold',sans-serif] text-[14px]">Particulars</p>
+                  <p className="font-['Source_Sans_3:Bold',sans-serif] text-[14px]">Amount</p>
+                  <p className="font-['Source_Sans_3:Bold',sans-serif] text-[14px]">Date of Expense</p>
+                  <p className="font-['Source_Sans_3:Bold',sans-serif] text-[14px] text-center">Attachment</p>
+                </div>
+
+                {particulars.map((item) => (
+                  <div key={item.id} className="grid grid-cols-[2fr_1fr_1fr_100px] gap-[24px] px-[32px] py-[20px] border-b border-[#e2e8f0] hover:bg-[#f8fafc] transition-colors">
+                    <p className="font-['Source_Sans_3:Regular',sans-serif] text-[14px] text-[#0f172b]">{item.description}</p>
+                    <p className="font-['Source_Sans_3:Regular',sans-serif] text-[14px] text-[#0f172b]">{formatCurrency(item.amount)}</p>
+                    <p className="font-['Source_Sans_3:Regular',sans-serif] text-[14px] text-[#0f172b]">{formatDate(item.dateOfExpense)}</p>
+                    <div className="flex justify-center">
+                      {item.hasAttachment ? (
+                        <button className="flex items-center justify-center size-[32px] cursor-pointer hover:bg-[#e2e8f0] rounded transition-colors">
+                          <svg className="size-[18px]" fill="none" viewBox="0 0 16 16">
+                            <path d="M14 10V13.3333C14 13.687 13.8595 14.0261 13.6095 14.2761C13.3594 14.5262 13.0203 14.6667 12.6667 14.6667H3.33333C2.97971 14.6667 2.64057 14.5262 2.39052 14.2761C2.14048 14.0261 2 13.687 2 13.3333V10" stroke="#4A5565" strokeWidth="1.33333" />
+                            <path d="M5.33333 6.66667L8 4L10.6667 6.66667" stroke="#4A5565" strokeWidth="1.33333" />
+                          </svg>
+                        </button>
+                      ) : (
+                        <span className="font-['Source_Sans_3:Regular',sans-serif] text-[12px] text-[#94a3b8]">N/A</span>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Mobile Card List - Mobile */}
+              <div className="lg:hidden flex flex-col gap-4 mb-6">
+                {particulars.map((item) => (
+                  <div key={item.id} className="bg-white rounded-[14px] border border-[#e2e8f0] p-4">
+                    <p className="font-['Source_Sans_3:Bold',sans-serif] text-[12px] text-[#62748e] mb-2">Particulars</p>
+                    <p className="font-['Source_Sans_3:Regular',sans-serif] text-[14px] text-[#0f172b] mb-3">{item.description}</p>
+                    
+                    <div className="grid grid-cols-2 gap-3 mb-3">
+                      <div>
+                        <p className="font-['Source_Sans_3:Bold',sans-serif] text-[12px] text-[#62748e] mb-1">Amount</p>
+                        <p className="font-['Source_Sans_3:Regular',sans-serif] text-[14px] text-[#0f172b]">{formatCurrency(item.amount)}</p>
+                      </div>
+                      <div>
+                        <p className="font-['Source_Sans_3:Bold',sans-serif] text-[12px] text-[#62748e] mb-1">Date</p>
+                        <p className="font-['Source_Sans_3:Regular',sans-serif] text-[14px] text-[#0f172b]">{formatDate(item.dateOfExpense)}</p>
+                      </div>
+                    </div>
+
+                    {item.hasAttachment ? (
+                      <button className="w-full flex items-center justify-center gap-2 py-2 border border-[#e2e8f0] rounded-[8px] hover:bg-[#f8fafc] transition-colors">
+                        <svg className="size-[18px]" fill="none" viewBox="0 0 16 16">
+                          <path d="M14 10V13.3333C14 13.687 13.8595 14.0261 13.6095 14.2761C13.3594 14.5262 13.0203 14.6667 12.6667 14.6667H3.33333C2.97971 14.6667 2.64057 14.5262 2.39052 14.2761C2.14048 14.0261 2 13.687 2 13.3333V10" stroke="#4A5565" strokeWidth="1.33333" />
+                          <path d="M5.33333 6.66667L8 4L10.6667 6.66667" stroke="#4A5565" strokeWidth="1.33333" />
+                        </svg>
+                        <p className="font-['Source_Sans_3:Regular',sans-serif] text-[14px] text-[#4A5565]">View Attachment</p>
+                      </button>
+                    ) : (
+                      <div className="w-full flex items-center justify-center py-2 border border-[#e2e8f0] rounded-[8px] bg-[#f8fafc]">
+                        <p className="font-['Source_Sans_3:Regular',sans-serif] text-[14px] text-[#94a3b8]">No Attachment</p>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </>
+          ) : (
+            <div className="bg-white rounded-[14px] border border-[#e2e8f0] p-8 text-center mb-[32px]">
+              <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#45556c] text-[14px]">
+                No particulars available for this expense.
+              </p>
             </div>
-
-            {expenseBreakdown.map((item, index) => (
-              <div key={index} className="grid grid-cols-[2fr_1fr_1fr_100px] gap-[24px] px-[32px] py-[20px] border-b border-[#e2e8f0] hover:bg-[#f8fafc] transition-colors">
-                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[14px] text-[#0f172b]">{item.particulars}</p>
-                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[14px] text-[#0f172b]">{item.amount}</p>
-                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[14px] text-[#0f172b]">{item.date}</p>
-                <div className="flex justify-center">
-                  <button className="flex items-center justify-center size-[32px] cursor-pointer hover:bg-[#e2e8f0] rounded transition-colors">
-                    <svg className="size-[18px]" fill="none" viewBox="0 0 16 16">
-                      <path d="M14 10V13.3333C14 13.687 13.8595 14.0261 13.6095 14.2761C13.3594 14.5262 13.0203 14.6667 12.6667 14.6667H3.33333C2.97971 14.6667 2.64057 14.5262 2.39052 14.2761C2.14048 14.0261 2 13.687 2 13.3333V10" stroke="#4A5565" strokeWidth="1.33333" />
-                      <path d="M5.33333 6.66667L8 4L10.6667 6.66667" stroke="#4A5565" strokeWidth="1.33333" />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Mobile Card List - Mobile */}
-          <div className="lg:hidden flex flex-col gap-4 mb-6">
-            {expenseBreakdown.map((item, index) => (
-              <div key={index} className="bg-white rounded-[14px] border border-[#e2e8f0] p-4">
-                <p className="font-['Source_Sans_3:Bold',sans-serif] text-[12px] text-[#62748e] mb-2">Particulars</p>
-                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[14px] text-[#0f172b] mb-3">{item.particulars}</p>
-                
-                <div className="grid grid-cols-2 gap-3 mb-3">
-                  <div>
-                    <p className="font-['Source_Sans_3:Bold',sans-serif] text-[12px] text-[#62748e] mb-1">Amount</p>
-                    <p className="font-['Source_Sans_3:Regular',sans-serif] text-[14px] text-[#0f172b]">{item.amount}</p>
-                  </div>
-                  <div>
-                    <p className="font-['Source_Sans_3:Bold',sans-serif] text-[12px] text-[#62748e] mb-1">Date</p>
-                    <p className="font-['Source_Sans_3:Regular',sans-serif] text-[14px] text-[#0f172b]">{item.date}</p>
-                  </div>
-                </div>
-
-                <button className="w-full flex items-center justify-center gap-2 py-2 border border-[#e2e8f0] rounded-[8px] hover:bg-[#f8fafc] transition-colors">
-                  <svg className="size-[18px]" fill="none" viewBox="0 0 16 16">
-                    <path d="M14 10V13.3333C14 13.687 13.8595 14.0261 13.6095 14.2761C13.3594 14.5262 13.0203 14.6667 12.6667 14.6667H3.33333C2.97971 14.6667 2.64057 14.5262 2.39052 14.2761C2.14048 14.0261 2 13.687 2 13.3333V10" stroke="#4A5565" strokeWidth="1.33333" />
-                    <path d="M5.33333 6.66667L8 4L10.6667 6.66667" stroke="#4A5565" strokeWidth="1.33333" />
-                  </svg>
-                  <p className="font-['Source_Sans_3:Regular',sans-serif] text-[14px] text-[#4A5565]">View Attachment</p>
-                </button>
-              </div>
-            ))}
-          </div>
+          )}
 
           {/* Totals Section */}
           <div className="flex flex-col gap-4 lg:gap-[16px] max-w-full lg:max-w-[400px] lg:ml-auto mb-10 lg:mb-[60px]">
             <div className="bg-white rounded-[14px] shadow-sm border border-[#e2e8f0] px-4 lg:px-[24px] py-3 lg:py-[16px] flex items-center justify-between">
               <p className="font-['Source_Sans_3:Bold',sans-serif] text-[#0f172b] text-[14px] lg:text-[16px]">Budget:</p>
-              <p className="font-['Source_Sans_3:Bold',sans-serif] text-[#0f172b] text-[16px] lg:text-[20px]">{expense.budget}</p>
+              <p className="font-['Source_Sans_3:Bold',sans-serif] text-[#0f172b] text-[16px] lg:text-[20px]">{formatCurrency(expense.budget)}</p>
             </div>
             <div className="bg-white rounded-[14px] shadow-sm border border-[#e2e8f0] px-4 lg:px-[24px] py-3 lg:py-[16px] flex items-center justify-between">
               <p className="font-['Source_Sans_3:Bold',sans-serif] text-[#0f172b] text-[14px] lg:text-[16px]">Total Spent:</p>
-              <p className="font-['Source_Sans_3:Bold',sans-serif] text-[#0f172b] text-[16px] lg:text-[20px]">{expense.totalAmountSpent}</p>
+              <p className="font-['Source_Sans_3:Bold',sans-serif] text-[#0f172b] text-[16px] lg:text-[20px]">{formatCurrency(expense.totalAmountSpent)}</p>
             </div>
           </div>
         </div>

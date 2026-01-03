@@ -4,12 +4,14 @@ import VerifiedExpensesPage from "./components/VerifiedExpensesPage";
 import LineItemsPage from "./components/LineItemsPage";
 import ArchivesPage from "./components/ArchivesPage";
 
+// 1. Import the Provider
+import { ExpenseVerificationProvider } from "./contexts/ExpenseVerificationContext";
+
 type Page = "home" | "verified-expenses" | "line-items" | "archives";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<Page>("home");
 
-  // Render the appropriate page based on current state
   const renderPage = () => {
     switch (currentPage) {
       case "home":
@@ -26,8 +28,11 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen w-full">
-      {renderPage()}
-    </div>
+    // 2. Wrap the entire app structure
+    <ExpenseVerificationProvider>
+      <div className="min-h-screen w-full">
+        {renderPage()}
+      </div>
+    </ExpenseVerificationProvider>
   );
 }
