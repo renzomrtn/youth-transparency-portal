@@ -4,6 +4,18 @@ import Footer from "./shared/Footer";
 import Pagination from "./shared/Pagination";
 import { ExpenseItem } from "../contexts/ExpenseVerificationContext";
 
+// ADD THIS: Line Item Lookup
+const LINE_ITEM_LOOKUP: Record<string, string> = {
+  "LI-2025/810-2K2Q": "HIV/AIDS Awareness Seminar",
+  "LI-2025/909-9KCY": "Anti-Illegal Drugs Seminar",
+  "LI-2025/908-LTTC": "Leadership Training Camp",
+  "LI-2025/907-K98N": "Environmental Cleanup Drive",
+  "LI-2025/906-P48T": "Youth Sports Festival"
+};
+
+// ADD THIS: Helper function to get display name
+const getLineItemName = (id: string) => LINE_ITEM_LOOKUP[id] || id;
+
 interface VerifiedExpensesDetailedViewProps {
   expense: ExpenseItem;
   onClose: () => void;
@@ -65,9 +77,12 @@ export default function VerifiedExpensesDetailedView({ expense, onClose, onNavig
 
           {/* Expense Summary Card */}
           <div className="bg-white rounded-[14px] shadow-sm border border-[#e2e8f0] p-4 lg:p-[32px] mb-6 lg:mb-[32px]">
-            <h2 className="font-['Source_Sans_3:Medium',sans-serif] text-[#0f172b] text-[18px] lg:text-[24px] mb-[4px]">{expense.lineItem}</h2>
+            {/* UPDATED: Show both the display name and the ID */}
+            <h2 className="font-['Source_Sans_3:Medium',sans-serif] text-[#0f172b] text-[18px] lg:text-[24px] mb-[4px]">
+              {getLineItemName(expense.lineItem)}
+            </h2>
             <div className="flex flex-col lg:flex-row lg:gap-[12px] lg:items-center gap-1 mb-4 lg:mb-[24px]">
-              <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#45556c] text-[12px] lg:text-[14px]">Submitted by: {expense.submittedBy}</p>
+              <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#45556c] text-[12px] lg:text-[14px]">Submitted by: {expense.submittedBy || "N/A"}</p>
               <p className="text-[#45556c] hidden lg:block">•</p>
               <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#45556c] text-[12px] lg:text-[14px]">Updated: {formatDate(expense.updatedAt || expense.createdAt || '')}</p>
             </div>
@@ -78,10 +93,10 @@ export default function VerifiedExpensesDetailedView({ expense, onClose, onNavig
                   Line Item Information
                 </p>
                 <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[12px] lg:text-[14px] mb-1">
-                  ID: {expense.lineItemId}
+                  ID: {expense.lineItem}
                 </p>
                 <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[12px] lg:text-[14px] mb-1">
-                  Area of Participation: {expense.areaOfParticipation}
+                  Area of Participation: {expense.areaOfParticipation || "N/A"}
                 </p>
                 <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[12px] lg:text-[14px]">
                   Budget: {formatCurrency(expense.budget)}
@@ -100,10 +115,10 @@ export default function VerifiedExpensesDetailedView({ expense, onClose, onNavig
                   Expenditure Period
                 </p>
                 <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[12px] lg:text-[14px] mb-1">
-                  From: {formatDate(expense.fromDate)}
+                  From: {formatDate(expense.expenditurePeriod?.from || '')}
                 </p>
                 <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[12px] lg:text-[14px]">
-                  To: {formatDate(expense.toDate)}
+                  To: {formatDate(expense.expenditurePeriod?.to || '')}
                 </p>
               </div>
             </div>
