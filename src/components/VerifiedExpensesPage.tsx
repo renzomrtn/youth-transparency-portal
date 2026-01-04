@@ -100,11 +100,11 @@ export default function VerifiedExpensesPage({ onNavigate }: VerifiedExpensesPag
                       </h3>
                       <div className="flex flex-col lg:flex-row lg:gap-[12px] lg:items-center gap-1">
                         <p className="font-['Source_Sans_3:Regular',sans-serif] leading-[20px] text-[#45556c] text-[12px] lg:text-[14px]">
-                          Submitted by: {expense.submittedBy || "N/A"}
+                          Origin: SK Federation
                         </p>
                         <p className="font-['Source_Sans_3:Regular',sans-serif] leading-[20px] text-[#45556c] text-[14px] hidden lg:block">•</p>
                         <p className="font-['Source_Sans_3:Regular',sans-serif] leading-[20px] text-[#45556c] text-[12px] lg:text-[14px]">
-                          Updated: {formatDate(expense.updatedAt || expense.createdAt)}
+                          Published: {formatDate(expense.updatedAt || expense.createdAt)}
                         </p>
                       </div>
                     </div>

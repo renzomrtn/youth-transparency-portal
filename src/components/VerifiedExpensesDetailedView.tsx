@@ -82,9 +82,9 @@ export default function VerifiedExpensesDetailedView({ expense, onClose, onNavig
               {getLineItemName(expense.lineItem)}
             </h2>
             <div className="flex flex-col lg:flex-row lg:gap-[12px] lg:items-center gap-1 mb-4 lg:mb-[24px]">
-              <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#45556c] text-[12px] lg:text-[14px]">Submitted by: {expense.submittedBy || "N/A"}</p>
+              <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#45556c] text-[12px] lg:text-[14px]">Origin: SK Federation</p>
               <p className="text-[#45556c] hidden lg:block">•</p>
-              <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#45556c] text-[12px] lg:text-[14px]">Updated: {formatDate(expense.updatedAt || expense.createdAt || '')}</p>
+              <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#45556c] text-[12px] lg:text-[14px]">Published: {formatDate(expense.updatedAt || expense.createdAt || '')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-[24px]">
