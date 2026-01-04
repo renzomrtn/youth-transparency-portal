@@ -140,7 +140,7 @@ export default function VerifiedExpensesPage({ onNavigate }: VerifiedExpensesPag
                         Total Amount Spent
                       </p>
                       <p className="font-['Source_Sans_3:Regular',sans-serif] leading-[20px] text-[#0f172b] text-[12px] lg:text-[14px]">
-                        {formatCurrency(expense.totalAmountSpent)}
+                        {formatCurrency(expense.totalAmount)}
                       </p>
                     </div>
 

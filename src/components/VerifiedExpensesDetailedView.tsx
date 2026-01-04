@@ -107,7 +107,7 @@ export default function VerifiedExpensesDetailedView({ expense, onClose, onNavig
                   Total Amount Spent
                 </p>
                 <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[12px] lg:text-[14px]">
-                  {formatCurrency(expense.totalAmountSpent)}
+                  {formatCurrency(expense.totalAmount)}
                 </p>
               </div>
               <div>
@@ -207,7 +207,7 @@ export default function VerifiedExpensesDetailedView({ expense, onClose, onNavig
             </div>
             <div className="bg-white rounded-[14px] shadow-sm border border-[#e2e8f0] px-4 lg:px-[24px] py-3 lg:py-[16px] flex items-center justify-between">
               <p className="font-['Source_Sans_3:Bold',sans-serif] text-[#0f172b] text-[14px] lg:text-[16px]">Total Spent:</p>
-              <p className="font-['Source_Sans_3:Bold',sans-serif] text-[#0f172b] text-[16px] lg:text-[20px]">{formatCurrency(expense.totalAmountSpent)}</p>
+              <p className="font-['Source_Sans_3:Bold',sans-serif] text-[#0f172b] text-[16px] lg:text-[20px]">{formatCurrency(expense.totalAmount)}</p>
             </div>
           </div>
         </div>
