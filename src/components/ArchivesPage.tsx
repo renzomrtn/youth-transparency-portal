@@ -48,7 +48,7 @@ export default function ArchivesPage({ onNavigate }: ArchivesPageProps) {
   return (
     <PageLayout currentPage="archives" onNavigate={onNavigate}>
       <div className="max-w-[900px]">
-        <h1 className="font-['Source_Sans_3:Bold',sans-serif] leading-tight text-[#0f172b] text-[24px] lg:text-[36px] mb-6 lg:mb-[32px]">
+        <h1 className="font-['Source_Sans_3:Bold',sans-serif] leading-tight text-[#0f172b] text-[28px] lg:text-[42px] mb-6 lg:mb-[32px]">
           ARCHIVES
         </h1>
         
@@ -56,42 +56,48 @@ export default function ArchivesPage({ onNavigate }: ArchivesPageProps) {
           {archives.map((archive) => (
             <div key={archive.id} className="bg-white rounded-[14px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_-1px_rgba(0,0,0,0.1)] border border-[#e2e8f0] p-4 lg:p-[32px]">
               <div className="mb-[8px]">
-                <p className="font-['Source_Sans_3:Regular',sans-serif] leading-[20px] text-[#62748e] text-[12px] lg:text-[14px]">
+                <p className="font-['Source_Sans_3:Regular',sans-serif] leading-[20px] text-[#62748e] text-[14px] lg:text-[16px]">
                   <span className="font-['Source_Sans_3:Bold',sans-serif]">Author:</span> {archive.author}
                 </p>
               </div>
               
-              <h3 className="font-['Source_Sans_3:Bold',sans-serif] leading-tight text-[#0f172b] text-[18px] lg:text-[24px] mb-[4px]">
+              <h2 className="font-['Source_Sans_3:Bold',sans-serif] leading-tight text-[#0f172b] text-[20px] lg:text-[28px] mb-[8px]">
                 {archive.title}
-              </h3>
+              </h2>
               
               <div className="flex flex-col lg:flex-row lg:gap-[12px] lg:items-center gap-1 mb-4 lg:mb-[24px]">
-                <p className="font-['Source_Sans_3:Regular',sans-serif] leading-[20px] text-[#45556c] text-[12px] lg:text-[14px]">
+                <p className="font-['Source_Sans_3:Regular',sans-serif] leading-[20px] text-[#45556c] text-[14px] lg:text-[16px]">
                   Origin: {archive.origin}
                 </p>
-                <p className="font-['Source_Sans_3:Regular',sans-serif] leading-[20px] text-[#45556c] text-[14px] hidden lg:block">•</p>
-                <p className="font-['Source_Sans_3:Regular',sans-serif] leading-[20px] text-[#45556c] text-[12px] lg:text-[14px]">
+                <p className="font-['Source_Sans_3:Regular',sans-serif] leading-[20px] text-[#45556c] text-[16px] hidden lg:block">•</p>
+                <p className="font-['Source_Sans_3:Regular',sans-serif] leading-[20px] text-[#45556c] text-[14px] lg:text-[16px]">
                   Published: {archive.publishDate}
                 </p>
               </div>
 
               <div>
-                <p className="font-['Source_Sans_3:Bold',sans-serif] leading-[20px] text-[#62748e] text-[12px] lg:text-[14px] mb-[12px]">
+                <h3 className="font-['Source_Sans_3:Bold',sans-serif] leading-[20px] text-[#62748e] text-[14px] lg:text-[16px] mb-[12px]">
                   Actions
-                </p>
+                </h3>
                 <div className="flex gap-[16px]">
-                  <button className="flex items-center gap-[8px] px-[16px] py-[8px] border border-[#e2e8f0] rounded-[8px] hover:bg-[#f8fafc] transition-colors cursor-pointer">
-                    <svg className="block size-[16px]" fill="none" viewBox="0 0 16 16">
+                  <button 
+                    aria-label={`View ${archive.title}`}
+                    className="flex items-center gap-[8px] px-[16px] py-[10px] border border-[#e2e8f0] rounded-[8px] hover:bg-[#f8fafc] transition-colors cursor-pointer"
+                  >
+                    <svg className="block size-[18px]" fill="none" viewBox="0 0 16 16" aria-hidden="true">
                       <path d="M0.666667 8C0.666667 8 3.33333 2.66667 8 2.66667C12.6667 2.66667 15.3333 8 15.3333 8C15.3333 8 12.6667 13.3333 8 13.3333C3.33333 13.3333 0.666667 8 0.666667 8Z" stroke="#4A5565" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
                       <path d="M8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10Z" stroke="#4A5565" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
                     </svg>
-                    <p className="font-['Source_Sans_3:Regular',sans-serif] leading-[20px] text-[#4A5565] text-[12px] lg:text-[14px]">View</p>
+                    <p className="font-['Source_Sans_3:SemiBold',sans-serif] leading-[20px] text-[#4A5565] text-[14px] lg:text-[16px]">View</p>
                   </button>
-                  <button className="flex items-center gap-[8px] px-[16px] py-[8px] border border-[#e2e8f0] rounded-[8px] hover:bg-[#f8fafc] transition-colors cursor-pointer">
-                    <svg className="block size-[14px]" fill="none" viewBox="0 0 14 18">
+                  <button 
+                    aria-label={`Download ${archive.title}`}
+                    className="flex items-center gap-[8px] px-[16px] py-[10px] border border-[#e2e8f0] rounded-[8px] hover:bg-[#f8fafc] transition-colors cursor-pointer"
+                  >
+                    <svg className="block size-[16px]" fill="none" viewBox="0 0 14 18" aria-hidden="true">
                       <path d={svgPaths.p2481f531} fill="#4A5565" />
                     </svg>
-                    <p className="font-['Source_Sans_3:Regular',sans-serif] leading-[20px] text-[#4A5565] text-[12px] lg:text-[14px]">Download</p>
+                    <p className="font-['Source_Sans_3:SemiBold',sans-serif] leading-[20px] text-[#4A5565] text-[14px] lg:text-[16px]">Download</p>
                   </button>
                 </div>
               </div>

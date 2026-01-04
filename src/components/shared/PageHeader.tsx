@@ -84,11 +84,13 @@ export default function PageHeader({ currentPage, onNavigate }: PageHeaderProps)
               <button
                 key={id}
                 onClick={() => onNavigate(id)}
+                aria-label={`Navigate to ${label}`}
+                aria-current={isActive ? "page" : undefined}
                 className={`h-10 rounded-[10px] px-4 flex gap-2 items-center cursor-pointer transition-colors ${
                   isActive ? "bg-[#174499] hover:bg-[#0f3a8a]" : "hover:bg-[#f1f5f9]"
                 }`}
               >
-                <svg className="block size-4" fill="none" viewBox="0 0 16 16">
+                <svg className="block size-4" fill="none" viewBox="0 0 16 16" aria-hidden="true">
                   {renderIcon(icon, isActive)}
                 </svg>
                 <p className={`font-['Source_Sans_3:${isActive ? "SemiBold" : "Regular"}',sans-serif] leading-6 text-[16px] ${isActive ? "text-[#fdfdfd]" : "text-[#314158]"}`}>
@@ -102,9 +104,11 @@ export default function PageHeader({ currentPage, onNavigate }: PageHeaderProps)
         {/* Mobile Menu Toggle Button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={isMobileMenuOpen}
           className="lg:hidden flex items-center justify-center size-10 rounded-[10px] hover:bg-[#f1f5f9] transition-colors"
         >
-          <svg className="size-6" fill="none" viewBox="0 0 24 24" stroke="#314158" strokeWidth="2">
+          <svg className="size-6" fill="none" viewBox="0 0 24 24" stroke="#314158" strokeWidth="2" aria-hidden="true">
             {isMobileMenuOpen ? (
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             ) : (

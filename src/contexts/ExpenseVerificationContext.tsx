@@ -41,6 +41,10 @@ export interface ExpenseItem {
   totalAmountSpent: number;
   fromDate: string;
   toDate: string;
+  expenditurePeriod?: {
+    from: string;
+    to: string;
+  };
   submittedBy: string;
   status: "Verified" | "Unverified" | "Pending" | "Flagged";
   particulars?: Particular[];
