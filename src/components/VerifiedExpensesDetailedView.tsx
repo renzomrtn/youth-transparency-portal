@@ -4,7 +4,6 @@ import Footer from "./shared/Footer";
 import Pagination from "./shared/Pagination";
 import { ExpenseItem } from "../contexts/ExpenseVerificationContext";
 
-// ADD THIS: Line Item Lookup
 const LINE_ITEM_LOOKUP: Record<string, string> = {
   "LI-2025/810-2K2Q": "HIV/AIDS Awareness Seminar",
   "LI-2025/909-9KCY": "Anti-Illegal Drugs Seminar",
@@ -13,7 +12,6 @@ const LINE_ITEM_LOOKUP: Record<string, string> = {
   "LI-2025/906-P48T": "Youth Sports Festival"
 };
 
-// ADD THIS: Helper function to get display name
 const getLineItemName = (id: string) => LINE_ITEM_LOOKUP[id] || id;
 
 interface VerifiedExpensesDetailedViewProps {
@@ -24,7 +22,6 @@ interface VerifiedExpensesDetailedViewProps {
 
 export default function VerifiedExpensesDetailedView({ expense, onClose, onNavigate }: VerifiedExpensesDetailedViewProps) {
   
-  // Prevent the background page from scrolling while the modal is open
   useEffect(() => {
     const originalStyle = window.getComputedStyle(document.body).overflow;
     document.body.style.overflow = "hidden";
@@ -38,39 +35,35 @@ export default function VerifiedExpensesDetailedView({ expense, onClose, onNavig
     onNavigate(page);
   };
 
-  // Format currency
   const formatCurrency = (amount: number) => {
     return `₱${amount.toLocaleString('en-PH', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
   };
 
-  // Format date
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
   };
 
   const particulars = expense.particulars || [];
+  
+  // Logic for exceeding budget
+  const isOverBudget = Number(expense.totalAmount) > Number(expense.budget);
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-start justify-center z-[100]">
-      {/* Scrollable Container */}
       <div className="bg-white h-full w-full overflow-y-auto overflow-x-hidden pt-[97px]">
         
-        {/* Integrated Shared Page Header */}
         <PageHeader 
           currentPage="verified-expenses" 
           onNavigate={handleNavigate} 
         />
 
-        {/* Main Content */}
         <div className="max-w-[1200px] mx-auto px-4 lg:px-6 py-6 lg:py-[40px]">
-          {/* Back Button */}
           <button 
             onClick={onClose} 
-            aria-label="Go back to verified expenses list"
             className="flex items-center gap-[8px] mb-6 lg:mb-[32px] cursor-pointer hover:opacity-70 transition-opacity"
           >
-            <svg className="size-[20px]" fill="none" viewBox="0 0 20 20" aria-hidden="true">
+            <svg className="size-[20px]" fill="none" viewBox="0 0 20 20">
               <circle cx="10" cy="10" r="9" fill="#0f172b" />
               <path d="M12 14l-4-4 4-4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
@@ -81,7 +74,6 @@ export default function VerifiedExpensesDetailedView({ expense, onClose, onNavig
 
           {/* Expense Summary Card */}
           <div className="bg-white rounded-[14px] shadow-sm border border-[#e2e8f0] p-4 lg:p-[32px] mb-6 lg:mb-[32px]">
-            {/* UPDATED: Show both the display name and the ID */}
             <h2 className="font-['Source_Sans_3:Bold',sans-serif] text-[#0f172b] text-[20px] lg:text-[28px] mb-[8px]">
               {getLineItemName(expense.lineItem)}
             </h2>
@@ -96,34 +88,32 @@ export default function VerifiedExpensesDetailedView({ expense, onClose, onNavig
                 <h3 className="font-['Source_Sans_3:Bold',sans-serif] text-[#62748e] text-[14px] lg:text-[16px] mb-[8px] tracking-wide">
                   Line Item Information
                 </h3>
-                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[14px] lg:text-[16px] mb-1">
-                  ID: {expense.lineItem}
-                </p>
-                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[14px] lg:text-[16px] mb-1">
-                  Area of Participation: {expense.areaOfParticipation || "N/A"}
-                </p>
-                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[14px] lg:text-[16px]">
-                  Budget: {formatCurrency(expense.budget)}
-                </p>
+                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[14px] lg:text-[16px] mb-1">ID: {expense.lineItem}</p>
+                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[14px] lg:text-[16px] mb-1">Area of Participation: {expense.areaOfParticipation || "N/A"}</p>
+                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[14px] lg:text-[16px]">Budget: {formatCurrency(expense.budget)}</p>
               </div>
               <div>
                 <h3 className="font-['Source_Sans_3:Bold',sans-serif] text-[#62748e] text-[14px] lg:text-[16px] mb-[8px] tracking-wide">
                   Total Amount Spent
                 </h3>
-                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[14px] lg:text-[16px]">
+                <p 
+                  className="font-['Source_Sans_3:Regular',sans-serif] text-[14px] lg:text-[16px]"
+                  style={{ color: isOverBudget ? '#dc2626' : '#0f172b', fontWeight: isOverBudget ? '700' : '400' }}
+                >
                   {formatCurrency(expense.totalAmount)}
                 </p>
+                {isOverBudget && (
+                  <p className="text-[#dc2626] text-[14px] font-bold mt-1 tracking-tight">
+                    Exceeds Budget
+                  </p>
+                )}
               </div>
               <div>
                 <h3 className="font-['Source_Sans_3:Bold',sans-serif] text-[#62748e] text-[14px] lg:text-[16px] mb-[8px] tracking-wide">
                   Expenditure Period
                 </h3>
-                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[14px] lg:text-[16px] mb-1">
-                  From: {formatDate(expense.expenditurePeriod?.from || '')}
-                </p>
-                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[14px] lg:text-[16px]">
-                  To: {formatDate(expense.expenditurePeriod?.to || '')}
-                </p>
+                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[14px] lg:text-[16px] mb-1">From: {formatDate(expense.expenditurePeriod?.from || '')}</p>
+                <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[14px] lg:text-[16px]">To: {formatDate(expense.expenditurePeriod?.to || '')}</p>
               </div>
             </div>
           </div>
@@ -147,12 +137,13 @@ export default function VerifiedExpensesDetailedView({ expense, onClose, onNavig
                     <div className="flex justify-center">
                       {item.hasAttachment ? (
                         <button 
-                          aria-label={`Download attachment for ${item.description}`}
+                          aria-label={`View Attachment for ${item.description}`}
                           className="flex items-center justify-center size-[36px] cursor-pointer hover:bg-[#e2e8f0] rounded transition-colors"
                         >
-                          <svg className="size-[20px]" fill="none" viewBox="0 0 16 16" aria-hidden="true">
-                            <path d="M14 10V13.3333C14 13.687 13.8595 14.0261 13.6095 14.2761C13.3594 14.5262 13.0203 14.6667 12.6667 14.6667H3.33333C2.97971 14.6667 2.64057 14.5262 2.39052 14.2761C2.14048 14.0261 2 13.687 2 13.3333V10" stroke="#4A5565" strokeWidth="1.33333" />
-                            <path d="M5.33333 6.66667L8 4L10.6667 6.66667" stroke="#4A5565" strokeWidth="1.33333" />
+                          <svg className="size-[20px]" viewBox="0 0 24 24" fill="none" stroke="#4A5565" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                            <circle cx="8.5" cy="8.5" r="1.5" />
+                            <polyline points="21 15 16 10 5 21" />
                           </svg>
                         </button>
                       ) : (
@@ -163,7 +154,7 @@ export default function VerifiedExpensesDetailedView({ expense, onClose, onNavig
                 ))}
               </div>
 
-              {/* Mobile Card List - Mobile */}
+              {/* Mobile Card List */}
               <div className="lg:hidden flex flex-col gap-4 mb-6">
                 {particulars.map((item) => (
                   <div key={item.id} className="bg-white rounded-[14px] border border-[#e2e8f0] p-4">
@@ -183,18 +174,19 @@ export default function VerifiedExpensesDetailedView({ expense, onClose, onNavig
 
                     {item.hasAttachment ? (
                       <button 
-                        aria-label={`Download attachment for ${item.description}`}
+                        aria-label={`View Attachment for ${item.description}`}
                         className="w-full flex items-center justify-center gap-2 py-3 border border-[#e2e8f0] rounded-[8px] hover:bg-[#f8fafc] transition-colors"
                       >
-                        <svg className="size-[20px]" fill="none" viewBox="0 0 16 16" aria-hidden="true">
-                          <path d="M14 10V13.3333C14 13.687 13.8595 14.0261 13.6095 14.2761C13.3594 14.5262 13.0203 14.6667 12.6667 14.6667H3.33333C2.97971 14.6667 2.64057 14.5262 2.39052 14.2761C2.14048 14.0261 2 13.687 2 13.3333V10" stroke="#4A5565" strokeWidth="1.33333" />
-                          <path d="M5.33333 6.66667L8 4L10.6667 6.66667" stroke="#4A5565" strokeWidth="1.33333" />
+                        <svg className="size-[20px]" viewBox="0 0 24 24" fill="none" stroke="#4A5565" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                          <circle cx="8.5" cy="8.5" r="1.5" />
+                          <polyline points="21 15 16 10 5 21" />
                         </svg>
                         <p className="font-['Source_Sans_3:SemiBold',sans-serif] text-[16px] text-[#4A5565]">View Attachment</p>
                       </button>
                     ) : (
                       <div className="w-full flex items-center justify-center py-3 border border-[#e2e8f0] rounded-[8px] bg-[#f8fafc]">
-                        <p className="font-['Source_Sans_3:Regular',sans-serif] text-[16px] text-[#94a3b8]">No Attachment</p>
+                        <p className="font-['Source_Sans_3:Regular',sans-serif] text-[16px] text-[#94a3b8]">No Gallery</p>
                       </div>
                     )}
                   </div>
@@ -215,12 +207,25 @@ export default function VerifiedExpensesDetailedView({ expense, onClose, onNavig
               <p className="font-['Source_Sans_3:Bold',sans-serif] text-[#0f172b] text-[14px] lg:text-[16px]">Budget:</p>
               <p className="font-['Source_Sans_3:Bold',sans-serif] text-[#0f172b] text-[16px] lg:text-[20px]">{formatCurrency(expense.budget)}</p>
             </div>
-            <div className="bg-white rounded-[14px] shadow-sm border border-[#e2e8f0] px-4 lg:px-[24px] py-3 lg:py-[16px] flex items-center justify-between">
-              <p className="font-['Source_Sans_3:Bold',sans-serif] text-[#0f172b] text-[14px] lg:text-[16px]">Total Spent:</p>
-              <p className="font-['Source_Sans_3:Bold',sans-serif] text-[#0f172b] text-[16px] lg:text-[20px]">{formatCurrency(expense.totalAmount)}</p>
+            
+            <div className="bg-white rounded-[14px] shadow-sm border border-[#e2e8f0] px-4 lg:px-[24px] py-3 lg:py-[16px] flex flex-col items-end">
+              <div className="flex items-center justify-between w-full">
+                <p className="font-['Source_Sans_3:Bold',sans-serif] text-[#0f172b] text-[14px] lg:text-[16px]">Total Spent:</p>
+                <p 
+                  className="font-['Source_Sans_3:Bold',sans-serif] text-[16px] lg:text-[20px]"
+                  style={{ color: isOverBudget ? '#dc2626' : '#0f172b' }}
+                >
+                  {formatCurrency(expense.totalAmount)}
+                </p>
+              </div>
+              
+              {isOverBudget && (
+                <p className="text-[#dc2626] text-[14px] font-bold mt-1">
+                  Exceeds Budget by {formatCurrency(Number(expense.totalAmount) - Number(expense.budget))}
+                </p>
+              )}
             </div>
-          </div>
-        </div>
+          </div></div>
 
         <Pagination />
         <Footer />
