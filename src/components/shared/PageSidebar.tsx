@@ -45,7 +45,7 @@ export default function PageSidebar() {
           <p className="hidden lg:block font-['Source_Sans_3:Bold',sans-serif] leading-[20px] text-[#0f172b] text-[16px] mb-[16px]">Filters</p>
           
           <div className="mb-[16px]">
-            <label htmlFor="year-filter" className="font-['Source_Sans_3:SemiBold',sans-serif] leading-[20px] text-[#62748e] text-[14px] mb-[8px] block">Year</label>
+            <label htmlFor="year-filter" className="font-['Source_Sans_3:SemiBold',sans-serif] leading-[20px] text-[#45556c] text-[14px] mb-[8px] block">Year</label>
             <select 
               id="year-filter"
               aria-label="Filter by year"
@@ -58,7 +58,7 @@ export default function PageSidebar() {
           </div>
 
           <div className="mb-[16px]">
-            <label htmlFor="month-filter" className="font-['Source_Sans_3:SemiBold',sans-serif] leading-[20px] text-[#62748e] text-[14px] mb-[8px] block">Month</label>
+            <label htmlFor="month-filter" className="font-['Source_Sans_3:SemiBold',sans-serif] leading-[20px] text-[#45556c] text-[14px] mb-[8px] block">Month</label>
             <select 
               id="month-filter"
               aria-label="Filter by month"
@@ -81,7 +81,7 @@ export default function PageSidebar() {
           </div>
 
           <div className="mb-[16px]">
-            <label htmlFor="origin-filter" className="font-['Source_Sans_3:SemiBold',sans-serif] leading-[20px] text-[#62748e] text-[14px] mb-[8px] block">Origin</label>
+            <label htmlFor="origin-filter" className="font-['Source_Sans_3:SemiBold',sans-serif] leading-[20px] text-[#45556c] text-[14px] mb-[8px] block">Origin</label>
             <select 
               id="origin-filter"
               aria-label="Filter by origin"
@@ -157,7 +157,7 @@ export default function PageSidebar() {
             <p className="font-['Source_Sans_3:Regular',sans-serif] leading-[20px] text-[#0f172b] text-[14px]">{num}</p>
           </button>
         ))}
-        <span className="font-['Source_Sans_3:Regular',sans-serif] leading-[20px] text-[#62748e] text-[14px] px-[4px]" aria-hidden="true">...</span>
+        <span className="font-['Source_Sans_3:Regular',sans-serif] leading-[20px] text-[#45556c] text-[14px] px-[4px]" aria-hidden="true">...</span>
         {[11, 14].map(num => (
           <button 
             key={num} 

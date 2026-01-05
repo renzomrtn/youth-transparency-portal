@@ -80,7 +80,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                   <p className="font-bold text-[#0f172b] text-[16px] lg:text-[18px] truncate" title={stats.name}>
                     {stats.name.toUpperCase()}
                   </p>
-                  <p className="text-[#62748e] text-[14px]">Origin</p>
+                  <p className="text-[#45556c] text-[14px]">Origin</p>
                 </div>
               </div>
 
@@ -151,13 +151,13 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-2">
                     <div className="flex flex-col gap-1">
                       <p className="font-semibold text-[#101828] text-[15px] lg:text-[16px]">{item.title}</p>
-                      <div className="flex gap-2 items-center text-[13px] lg:text-[14px] text-[#62748e]">
+                      <div className="flex gap-2 items-center text-[13px] lg:text-[14px] text-[#45556c]">
                         <span>{item.org}</span>
                         <span className="text-gray-300">•</span>
                         <span>{item.type}</span>
                       </div>
                     </div>
-                    <p className="text-[13px] lg:text-[14px] text-[#94a3b8] font-medium">{item.date}</p>
+                    <p className="text-[13px] lg:text-[14px] text-[#45556c] font-medium">{item.date}</p>
                   </div>
                 </div>
               ))}
@@ -205,7 +205,7 @@ function StatCard({ label, value, badge, iconPath, iconPath2, gradient, bgColor,
       </div>
       <div>
         <p className="font-bold text-[#0f172b] text-[24px] lg:text-[28px] leading-tight mb-1">{value}</p>
-        <p className="text-[#62748e] text-[14px] lg:text-[15px] font-medium">{label}</p>
+        <p className="text-[#45556c] text-[14px] lg:text-[15px] font-medium">{label}</p>
       </div>
     </div>
   );

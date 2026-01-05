@@ -111,7 +111,7 @@ function Heading2() {
 function Paragraph1() {
   return (
     <div className="h-[24px] relative shrink-0 w-full" data-name="Paragraph">
-      <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[24px] left-0 text-[#62748e] text-[16px] text-nowrap top-0">Origin</p>
+      <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[24px] left-0 text-[#45556c] text-[16px] text-nowrap top-0">Origin</p>
     </div>
   );
 }
@@ -185,7 +185,7 @@ function App1() {
 function App2() {
   return (
     <div className="h-[24px] relative shrink-0 w-full" data-name="App">
-      <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[24px] left-0 text-[#62748e] text-[16px] text-nowrap top-0">Annual Budget</p>
+      <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[24px] left-0 text-[#45556c] text-[16px] text-nowrap top-0">Annual Budget</p>
     </div>
   );
 }
@@ -250,7 +250,7 @@ function App4() {
 function App5() {
   return (
     <div className="h-[24px] relative shrink-0 w-full" data-name="App">
-      <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[24px] left-0 text-[#62748e] text-[16px] text-nowrap top-0">Documents</p>
+      <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[24px] left-0 text-[#45556c] text-[16px] text-nowrap top-0">Documents</p>
     </div>
   );
 }
@@ -312,7 +312,7 @@ function App7() {
 function App8() {
   return (
     <div className="h-[24px] relative shrink-0 w-full" data-name="App">
-      <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[24px] left-0 text-[#62748e] text-[16px] text-nowrap top-0">Verified Expenses</p>
+      <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[24px] left-0 text-[#45556c] text-[16px] text-nowrap top-0">Verified Expenses</p>
     </div>
   );
 }
@@ -364,7 +364,7 @@ function App9() {
 function App10() {
   return (
     <div className="h-[24px] relative shrink-0 w-full" data-name="App">
-      <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[24px] left-0 text-[#62748e] text-[16px] text-nowrap top-0">Line Items</p>
+      <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[24px] left-0 text-[#45556c] text-[16px] text-nowrap top-0">Line Items</p>
     </div>
   );
 }

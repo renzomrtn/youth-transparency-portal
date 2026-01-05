@@ -402,9 +402,9 @@ function Container6() {
   return (
     <div className="absolute bg-white border border-[#e2e8f0] border-solid h-[186px] left-[calc(50%+0.5px)] rounded-[14px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_-1px_rgba(0,0,0,0.1)] top-[197px] translate-x-[-50%] w-[399px]" data-name="Container">
       <p className="absolute font-['Source_Sans_3:Medium',sans-serif] font-medium leading-[24px] left-[15px] text-[#0f172b] text-[20px] text-nowrap top-[23px]">HIV/AIDS Awareness Seminar</p>
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[15px] text-[#62748e] text-[12px] text-nowrap top-[64px]">Line Item Information</p>
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[148px] text-[#62748e] text-[12px] text-nowrap top-[64px]">Total Amount Spent</p>
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[271px] text-[#62748e] text-[12px] text-nowrap top-[63px]">Expenditure Period</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[15px] text-[#45556c] text-[12px] text-nowrap top-[64px]">Line Item Information</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[148px] text-[#45556c] text-[12px] text-nowrap top-[64px]">Total Amount Spent</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[271px] text-[#45556c] text-[12px] text-nowrap top-[63px]">Expenditure Period</p>
       <Paragraph3 />
       <Paragraph4 />
       <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[20px] left-[15px] text-[#0f172b] text-[0px] text-[10px] top-[128px] w-[84px]">
@@ -453,11 +453,11 @@ function Container7() {
       <p className="absolute font-['Source_Sans_3:Medium','Noto_Sans:Medium',sans-serif] font-medium leading-[24px] left-[18px] text-[#0f172b] text-[20px] text-nowrap top-[42px]">{`Venue Rental (1-day seminar) `}</p>
       <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[20px] left-[18px] text-[#101828] text-[16px] top-[92px] w-[108px]">₱12,000.00</p>
       <ArrowRightCircleFill1 />
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[18px] text-[#62748e] text-[12px] text-nowrap top-[18px]">Particulars:</p>
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[18px] text-[#62748e] text-[12px] text-nowrap top-[72px]">Amount:</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[18px] text-[#45556c] text-[12px] text-nowrap top-[18px]">Particulars:</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[18px] text-[#45556c] text-[12px] text-nowrap top-[72px]">Amount:</p>
       <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[20px] left-[18px] text-[#101828] text-[16px] top-[138px] w-[127px]">September 1, 2025</p>
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[18px] text-[#62748e] text-[12px] text-nowrap top-[118px]">Date of Expense:</p>
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[268px] text-[#62748e] text-[12px] text-nowrap top-[118px]">Attachment:</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[18px] text-[#45556c] text-[12px] text-nowrap top-[118px]">Date of Expense:</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[268px] text-[#45556c] text-[12px] text-nowrap top-[118px]">Attachment:</p>
       <Images />
     </div>
   );
@@ -491,11 +491,11 @@ function Container8() {
       <p className="absolute font-['Source_Sans_3:Medium',sans-serif] font-medium leading-[24px] left-[18px] text-[#0f172b] text-[20px] text-nowrap top-[42px]">Meals and Snacks for Participants (80 pax)</p>
       <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[20px] left-[18px] text-[#101828] text-[16px] top-[92px] w-[108px]">₱15,000.00</p>
       <ArrowRightCircleFill2 />
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[18px] text-[#62748e] text-[12px] text-nowrap top-[18px]">Particulars:</p>
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[18px] text-[#62748e] text-[12px] text-nowrap top-[72px]">Amount:</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[18px] text-[#45556c] text-[12px] text-nowrap top-[18px]">Particulars:</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[18px] text-[#45556c] text-[12px] text-nowrap top-[72px]">Amount:</p>
       <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[20px] left-[18px] text-[#101828] text-[16px] top-[138px] w-[127px]">September 1, 2025</p>
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[18px] text-[#62748e] text-[12px] text-nowrap top-[118px]">Date of Expense:</p>
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[268px] text-[#62748e] text-[12px] text-nowrap top-[118px]">Attachment:</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[18px] text-[#45556c] text-[12px] text-nowrap top-[118px]">Date of Expense:</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[268px] text-[#45556c] text-[12px] text-nowrap top-[118px]">Attachment:</p>
       <Images1 />
     </div>
   );
@@ -529,11 +529,11 @@ function Container9() {
       <p className="absolute font-['Source_Sans_3:Medium',sans-serif] font-medium leading-[24px] left-[18px] text-[#0f172b] text-[20px] text-nowrap top-[42px]">Honorarium for Speaker / Resource Person</p>
       <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[20px] left-[18px] text-[#101828] text-[16px] top-[92px] w-[108px]">₱8,000.00</p>
       <ArrowRightCircleFill3 />
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[18px] text-[#62748e] text-[12px] text-nowrap top-[18px]">Particulars:</p>
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[18px] text-[#62748e] text-[12px] text-nowrap top-[72px]">Amount:</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[18px] text-[#45556c] text-[12px] text-nowrap top-[18px]">Particulars:</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[18px] text-[#45556c] text-[12px] text-nowrap top-[72px]">Amount:</p>
       <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[20px] left-[18px] text-[#101828] text-[16px] top-[138px] w-[127px]">September 1, 2025</p>
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[18px] text-[#62748e] text-[12px] text-nowrap top-[118px]">Date of Expense:</p>
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[268px] text-[#62748e] text-[12px] text-nowrap top-[118px]">Attachment:</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[18px] text-[#45556c] text-[12px] text-nowrap top-[118px]">Date of Expense:</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[268px] text-[#45556c] text-[12px] text-nowrap top-[118px]">Attachment:</p>
       <Images2 />
     </div>
   );
@@ -567,11 +567,11 @@ function Container10() {
       <p className="absolute font-['Source_Sans_3:Medium',sans-serif] font-medium leading-[24px] left-[18px] text-[#0f172b] text-[20px] text-nowrap top-[42px]">Seminar Kits (IDs, pens, notebooks, folders)</p>
       <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[20px] left-[18px] text-[#101828] text-[16px] top-[92px] w-[108px]">₱11,000.00</p>
       <ArrowRightCircleFill4 />
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[18px] text-[#62748e] text-[12px] text-nowrap top-[18px]">Particulars:</p>
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[18px] text-[#62748e] text-[12px] text-nowrap top-[72px]">Amount:</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[18px] text-[#45556c] text-[12px] text-nowrap top-[18px]">Particulars:</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[18px] text-[#45556c] text-[12px] text-nowrap top-[72px]">Amount:</p>
       <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[20px] left-[18px] text-[#101828] text-[16px] top-[138px] w-[127px]">September 1, 2025</p>
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[18px] text-[#62748e] text-[12px] text-nowrap top-[118px]">Date of Expense:</p>
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[268px] text-[#62748e] text-[12px] text-nowrap top-[118px]">Attachment:</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[18px] text-[#45556c] text-[12px] text-nowrap top-[118px]">Date of Expense:</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[268px] text-[#45556c] text-[12px] text-nowrap top-[118px]">Attachment:</p>
       <Images3 />
     </div>
   );
@@ -605,11 +605,11 @@ function Container11() {
       <p className="absolute font-['Source_Sans_3:Medium',sans-serif] font-medium leading-[24px] left-[18px] text-[#0f172b] text-[20px] top-[42px] w-[367px]">IEC Materials Printing (Tarpaulin, flyers, posters)</p>
       <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[20px] left-[18px] text-[#101828] text-[16px] top-[115px] w-[108px]">₱9,555.56</p>
       <ArrowRightCircleFill5 />
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[18px] text-[#62748e] text-[12px] text-nowrap top-[18px]">Particulars:</p>
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[18px] text-[#62748e] text-[12px] text-nowrap top-[95px]">Amount:</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[18px] text-[#45556c] text-[12px] text-nowrap top-[18px]">Particulars:</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[18px] text-[#45556c] text-[12px] text-nowrap top-[95px]">Amount:</p>
       <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[20px] left-[18px] text-[#101828] text-[16px] top-[161px] w-[127px]">September 1, 2025</p>
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[18px] text-[#62748e] text-[12px] text-nowrap top-[141px]">Date of Expense:</p>
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[268px] text-[#62748e] text-[12px] text-nowrap top-[141px]">Attachment:</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[18px] text-[#45556c] text-[12px] text-nowrap top-[141px]">Date of Expense:</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[268px] text-[#45556c] text-[12px] text-nowrap top-[141px]">Attachment:</p>
       <Images4 />
     </div>
   );

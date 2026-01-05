@@ -6,7 +6,7 @@ import imgNagaCityOfficialSeal11 from "figma:asset/54453c4f43125634a29b3eeea73ee
 function Paragraph() {
   return (
     <div className="h-[20px] relative shrink-0 w-full" data-name="Paragraph">
-      <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[20px] left-0 text-[#62748e] text-[14px] top-0 w-[125px]">
+      <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[20px] left-0 text-[#45556c] text-[14px] top-0 w-[125px]">
         <span className="font-['Source_Sans_3:Bold',sans-serif] font-bold">Author:</span>
         <span>{` Luis Gomez`}</span>
       </p>
@@ -86,7 +86,7 @@ function ProjectsPage() {
 function Paragraph1() {
   return (
     <div className="absolute content-stretch flex h-[20px] items-start left-0 top-0 w-[272.656px]" data-name="Paragraph">
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">Actions</p>
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">Actions</p>
     </div>
   );
 }
@@ -159,7 +159,7 @@ function Container3() {
 function Paragraph2() {
   return (
     <div className="h-[20px] relative shrink-0 w-full" data-name="Paragraph">
-      <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[20px] left-0 text-[#62748e] text-[14px] top-0 w-[142px]">
+      <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[20px] left-0 text-[#45556c] text-[14px] top-0 w-[142px]">
         <span className="font-['Source_Sans_3:Bold',sans-serif] font-bold">Author:</span>
         <span>{` John Dela Cruz`}</span>
       </p>
@@ -238,7 +238,7 @@ function ProjectsPage2() {
 function Paragraph3() {
   return (
     <div className="absolute content-stretch flex h-[20px] items-start left-0 top-0 w-[272.656px]" data-name="Paragraph">
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">Actions</p>
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">Actions</p>
     </div>
   );
 }
@@ -311,7 +311,7 @@ function Container7() {
 function Paragraph4() {
   return (
     <div className="h-[20px] relative shrink-0 w-full" data-name="Paragraph">
-      <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[20px] left-0 text-[#62748e] text-[14px] top-0 w-[160px]">
+      <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[20px] left-0 text-[#45556c] text-[14px] top-0 w-[160px]">
         <span className="font-['Source_Sans_3:Bold',sans-serif] font-bold">Author:</span>
         <span>{` Pedro Reyes`}</span>
       </p>
@@ -390,7 +390,7 @@ function ProjectsPage4() {
 function Paragraph5() {
   return (
     <div className="absolute content-stretch flex h-[20px] items-start left-0 top-0 w-[272.656px]" data-name="Paragraph">
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">Actions</p>
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">Actions</p>
     </div>
   );
 }
@@ -463,7 +463,7 @@ function Container11() {
 function Paragraph6() {
   return (
     <div className="h-[20px] relative shrink-0 w-full" data-name="Paragraph">
-      <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[20px] left-0 text-[#62748e] text-[14px] top-0 w-[157px]">
+      <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[20px] left-0 text-[#45556c] text-[14px] top-0 w-[157px]">
         <span className="font-['Source_Sans_3:Bold',sans-serif] font-bold">Author:</span>
         <span>{` Carlos Mendoza`}</span>
       </p>
@@ -542,7 +542,7 @@ function ProjectsPage6() {
 function Paragraph7() {
   return (
     <div className="absolute content-stretch flex h-[20px] items-start left-0 top-0 w-[272.656px]" data-name="Paragraph">
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">Actions</p>
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">Actions</p>
     </div>
   );
 }
@@ -900,7 +900,7 @@ function Icon9() {
       <div className="absolute bottom-1/4 left-[37.5%] right-[37.5%] top-1/4" data-name="Vector">
         <div className="absolute inset-[-8.33%_-16.67%]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 5.33333 9.33333">
-            <path d={svgPaths.p2ab2d800} id="Vector" stroke="var(--stroke-0, #45556C)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
+            <path d={svgPaths.p2ab2d800} id="Vector" stroke="var(--stroke-0, #45556c)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
           </svg>
         </div>
       </div>
@@ -994,7 +994,7 @@ function Icon10() {
       <div className="absolute bottom-1/4 left-[37.5%] right-[37.5%] top-1/4" data-name="Vector">
         <div className="absolute inset-[-8.33%_-16.67%]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 5.33333 9.33333">
-            <path d={svgPaths.p3ec8f700} id="Vector" stroke="var(--stroke-0, #45556C)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
+            <path d={svgPaths.p3ec8f700} id="Vector" stroke="var(--stroke-0, #45556c)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
           </svg>
         </div>
       </div>

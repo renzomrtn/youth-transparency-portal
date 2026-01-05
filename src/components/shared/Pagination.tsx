@@ -17,7 +17,7 @@ export default function Pagination() {
           <p className="font-['Source_Sans_3:Regular',sans-serif] leading-[20px] text-[#0f172b] text-[14px]">{num}</p>
         </button>
       ))}
-      <span className="font-['Source_Sans_3:Regular',sans-serif] leading-[20px] text-[#62748e] text-[14px] px-[4px]" aria-hidden="true">...</span>
+      <span className="font-['Source_Sans_3:Regular',sans-serif] leading-[20px] text-[#45556c] text-[14px] px-[4px]" aria-hidden="true">...</span>
       {[11, 14].map(num => (
         <button 
           key={num} 

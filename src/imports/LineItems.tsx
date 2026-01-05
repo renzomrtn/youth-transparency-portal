@@ -85,7 +85,7 @@ function ProjectsPage() {
 function Paragraph() {
   return (
     <div className="content-stretch flex h-[20px] items-start relative shrink-0 w-full" data-name="Paragraph">
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">Line Item Information</p>
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">Line Item Information</p>
     </div>
   );
 }
@@ -125,7 +125,7 @@ function Container2() {
 function Paragraph3() {
   return (
     <div className="content-stretch flex h-[20px] items-start relative shrink-0 w-full" data-name="Paragraph">
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">Budget</p>
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">Budget</p>
     </div>
   );
 }
@@ -150,7 +150,7 @@ function Container3() {
 function Paragraph5() {
   return (
     <div className="absolute content-stretch flex h-[20px] items-start left-0 top-0 w-[272.656px]" data-name="Paragraph">
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">Implementation Date</p>
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">Implementation Date</p>
     </div>
   );
 }
@@ -283,7 +283,7 @@ function ProjectsPage2() {
 function Paragraph8() {
   return (
     <div className="content-stretch flex h-[20px] items-start relative shrink-0 w-full" data-name="Paragraph">
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">Line Item Information</p>
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">Line Item Information</p>
     </div>
   );
 }
@@ -323,7 +323,7 @@ function Container8() {
 function Paragraph11() {
   return (
     <div className="content-stretch flex h-[20px] items-start relative shrink-0 w-full" data-name="Paragraph">
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">Budget</p>
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">Budget</p>
     </div>
   );
 }
@@ -348,7 +348,7 @@ function Container9() {
 function Paragraph13() {
   return (
     <div className="absolute content-stretch flex h-[20px] items-start left-0 top-0 w-[272.656px]" data-name="Paragraph">
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">Implementation Date</p>
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">Implementation Date</p>
     </div>
   );
 }
@@ -481,7 +481,7 @@ function ProjectsPage4() {
 function Paragraph16() {
   return (
     <div className="content-stretch flex h-[20px] items-start relative shrink-0 w-full" data-name="Paragraph">
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">Line Item Information</p>
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">Line Item Information</p>
     </div>
   );
 }
@@ -521,7 +521,7 @@ function Container14() {
 function Paragraph19() {
   return (
     <div className="content-stretch flex h-[20px] items-start relative shrink-0 w-full" data-name="Paragraph">
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">Budget</p>
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">Budget</p>
     </div>
   );
 }
@@ -546,7 +546,7 @@ function Container15() {
 function Paragraph21() {
   return (
     <div className="absolute content-stretch flex h-[20px] items-start left-0 top-0 w-[272.656px]" data-name="Paragraph">
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">Implementation Date</p>
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">Implementation Date</p>
     </div>
   );
 }
@@ -679,7 +679,7 @@ function ProjectsPage6() {
 function Paragraph24() {
   return (
     <div className="content-stretch flex h-[20px] items-start relative shrink-0 w-full" data-name="Paragraph">
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">Line Item Information</p>
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">Line Item Information</p>
     </div>
   );
 }
@@ -719,7 +719,7 @@ function Container20() {
 function Paragraph27() {
   return (
     <div className="content-stretch flex h-[20px] items-start relative shrink-0 w-full" data-name="Paragraph">
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">Budget</p>
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">Budget</p>
     </div>
   );
 }
@@ -744,7 +744,7 @@ function Container21() {
 function Paragraph29() {
   return (
     <div className="absolute content-stretch flex h-[20px] items-start left-0 top-0 w-[272.656px]" data-name="Paragraph">
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">Implementation Date</p>
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">Implementation Date</p>
     </div>
   );
 }
@@ -1083,7 +1083,7 @@ function Icon5() {
       <div className="absolute bottom-1/4 left-[37.5%] right-[37.5%] top-1/4" data-name="Vector">
         <div className="absolute inset-[-8.33%_-16.67%]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 5.33333 9.33333">
-            <path d={svgPaths.p2ab2d800} id="Vector" stroke="var(--stroke-0, #45556C)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
+            <path d={svgPaths.p2ab2d800} id="Vector" stroke="var(--stroke-0, #45556c)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
           </svg>
         </div>
       </div>
@@ -1177,7 +1177,7 @@ function Icon6() {
       <div className="absolute bottom-1/4 left-[37.5%] right-[37.5%] top-1/4" data-name="Vector">
         <div className="absolute inset-[-8.33%_-16.67%]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 5.33333 9.33333">
-            <path d={svgPaths.p3ec8f700} id="Vector" stroke="var(--stroke-0, #45556C)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
+            <path d={svgPaths.p3ec8f700} id="Vector" stroke="var(--stroke-0, #45556c)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
           </svg>
         </div>
       </div>

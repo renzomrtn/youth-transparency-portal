@@ -85,7 +85,7 @@ export default function VerifiedExpensesDetailedView({ expense, onClose, onNavig
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-[24px]">
               <div>
-                <h3 className="font-['Source_Sans_3:Bold',sans-serif] text-[#62748e] text-[14px] lg:text-[16px] mb-[8px] tracking-wide">
+                <h3 className="font-['Source_Sans_3:Bold',sans-serif] text-[#45556c] text-[14px] lg:text-[16px] mb-[8px] tracking-wide">
                   Line Item Information
                 </h3>
                 <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[14px] lg:text-[16px] mb-1">ID: {expense.lineItem}</p>
@@ -93,7 +93,7 @@ export default function VerifiedExpensesDetailedView({ expense, onClose, onNavig
                 <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[14px] lg:text-[16px]">Budget: {formatCurrency(expense.budget)}</p>
               </div>
               <div>
-                <h3 className="font-['Source_Sans_3:Bold',sans-serif] text-[#62748e] text-[14px] lg:text-[16px] mb-[8px] tracking-wide">
+                <h3 className="font-['Source_Sans_3:Bold',sans-serif] text-[#45556c] text-[14px] lg:text-[16px] mb-[8px] tracking-wide">
                   Total Amount Spent
                 </h3>
                 <p 
@@ -109,7 +109,7 @@ export default function VerifiedExpensesDetailedView({ expense, onClose, onNavig
                 )}
               </div>
               <div>
-                <h3 className="font-['Source_Sans_3:Bold',sans-serif] text-[#62748e] text-[14px] lg:text-[16px] mb-[8px] tracking-wide">
+                <h3 className="font-['Source_Sans_3:Bold',sans-serif] text-[#45556c] text-[14px] lg:text-[16px] mb-[8px] tracking-wide">
                   Expenditure Period
                 </h3>
                 <p className="font-['Source_Sans_3:Regular',sans-serif] text-[#0f172b] text-[14px] lg:text-[16px] mb-1">From: {formatDate(expense.expenditurePeriod?.from || '')}</p>
@@ -158,16 +158,16 @@ export default function VerifiedExpensesDetailedView({ expense, onClose, onNavig
               <div className="lg:hidden flex flex-col gap-4 mb-6">
                 {particulars.map((item) => (
                   <div key={item.id} className="bg-white rounded-[14px] border border-[#e2e8f0] p-4">
-                    <h4 className="font-['Source_Sans_3:Bold',sans-serif] text-[14px] text-[#62748e] mb-2">Particulars</h4>
+                    <h4 className="font-['Source_Sans_3:Bold',sans-serif] text-[14px] text-[#45556c] mb-2">Particulars</h4>
                     <p className="font-['Source_Sans_3:Regular',sans-serif] text-[16px] text-[#0f172b] mb-3">{item.description}</p>
                     
                     <div className="grid grid-cols-2 gap-3 mb-3">
                       <div>
-                        <p className="font-['Source_Sans_3:Bold',sans-serif] text-[14px] text-[#62748e] mb-1">Amount</p>
+                        <p className="font-['Source_Sans_3:Bold',sans-serif] text-[14px] text-[#45556c] mb-1">Amount</p>
                         <p className="font-['Source_Sans_3:Regular',sans-serif] text-[16px] text-[#0f172b]">{formatCurrency(item.amount)}</p>
                       </div>
                       <div>
-                        <p className="font-['Source_Sans_3:Bold',sans-serif] text-[14px] text-[#62748e] mb-1">Date</p>
+                        <p className="font-['Source_Sans_3:Bold',sans-serif] text-[14px] text-[#45556c] mb-1">Date</p>
                         <p className="font-['Source_Sans_3:Regular',sans-serif] text-[16px] text-[#0f172b]">{formatDate(item.dateOfExpense)}</p>
                       </div>
                     </div>

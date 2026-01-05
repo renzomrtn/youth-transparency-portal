@@ -57,16 +57,20 @@ export default function PageHeader({ currentPage, onNavigate }: PageHeaderProps)
       {/* Container for Logo + Nav */}
       <div className="flex h-16 lg:h-full items-center justify-between w-full">
         
-        {/* Logo and Title Section */}
-        <div className="flex gap-3 lg:gap-4 items-center">
-          <div className="rounded-full shadow-md size-10 lg:size-16 bg-white shrink-0 overflow-hidden">
+        {/* Logo and Title Section - Now Clickable */}
+        <button 
+          onClick={() => onNavigate("home")}
+          className="flex gap-3 lg:gap-4 items-center cursor-pointer hover:opacity-80 transition-opacity focus:outline-none group"
+          aria-label="Go to Home"
+        >
+          <div className="rounded-full shadow-md size-10 lg:size-16 bg-white shrink-0 overflow-hidden group-hover:shadow-lg transition-shadow">
             <img
               alt="Logo"
               className="object-cover size-full"
               src={imgImageLogo}
             />
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col items-start text-left">
             <p className="font-['Source_Sans_3:Bold',sans-serif] leading-tight text-[#0f172b] text-[15px] lg:text-[16px] whitespace-nowrap">
               Youth Transparency Portal
             </p>
@@ -74,7 +78,7 @@ export default function PageHeader({ currentPage, onNavigate }: PageHeaderProps)
               Sangguniang Kabataan of Naga City
             </p>
           </div>
-        </div>
+        </button>
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex gap-2 items-center">

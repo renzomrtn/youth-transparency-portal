@@ -921,7 +921,7 @@ function ProjectsPage() {
 function Paragraph3() {
   return (
     <div className="content-stretch flex h-[20px] items-start relative shrink-0 w-full" data-name="Paragraph">
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">Line Item Information</p>
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">Line Item Information</p>
     </div>
   );
 }
@@ -973,7 +973,7 @@ function Container12() {
 function Paragraph7() {
   return (
     <div className="content-stretch flex h-[20px] items-start relative shrink-0 w-full" data-name="Paragraph">
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">Total Amount Spent</p>
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">Total Amount Spent</p>
     </div>
   );
 }
@@ -998,7 +998,7 @@ function Container13() {
 function Paragraph9() {
   return (
     <div className="absolute content-stretch flex h-[20px] items-start left-0 top-0 w-[272.656px]" data-name="Paragraph">
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">Expenditure Period</p>
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">Expenditure Period</p>
     </div>
   );
 }

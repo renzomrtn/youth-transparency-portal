@@ -406,9 +406,9 @@ function Container6() {
   return (
     <div className="absolute bg-white border border-[#e2e8f0] border-solid h-[186px] left-[calc(50%-1.5px)] rounded-[14px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_-1px_rgba(0,0,0,0.1)] top-[343px] translate-x-[-50%] w-[399px]" data-name="Container">
       <p className="absolute font-['Source_Sans_3:Medium',sans-serif] font-medium leading-[24px] left-[15px] text-[#0f172b] text-[20px] text-nowrap top-[23px]">HIV/AIDS Awareness Seminar</p>
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[14px] text-[#62748e] text-[12px] text-nowrap top-[82px]">Line Item Information</p>
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[147px] text-[#62748e] text-[12px] text-nowrap top-[82px]">Total Amount Spent</p>
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[270px] text-[#62748e] text-[12px] text-nowrap top-[81px]">Expenditure Period</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[14px] text-[#45556c] text-[12px] text-nowrap top-[82px]">Line Item Information</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[147px] text-[#45556c] text-[12px] text-nowrap top-[82px]">Total Amount Spent</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[270px] text-[#45556c] text-[12px] text-nowrap top-[81px]">Expenditure Period</p>
       <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[24px] left-[15px] text-[#606060] text-[12px] text-nowrap top-[47px]">Origin: SK Federation • Published: Sep 13, 2025</p>
       <Paragraph3 />
       <Paragraph4 />
@@ -466,9 +466,9 @@ function Container7() {
   return (
     <div className="absolute bg-white border border-[#e2e8f0] border-solid h-[186px] left-[calc(50%-1.5px)] rounded-[14px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_-1px_rgba(0,0,0,0.1)] top-[557px] translate-x-[-50%] w-[399px]" data-name="Container">
       <p className="absolute font-['Source_Sans_3:Medium',sans-serif] font-medium leading-[24px] left-[17px] text-[#0f172b] text-[20px] text-nowrap top-[20px]">Anti-Illegal Drugs Seminar</p>
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[16px] text-[#62748e] text-[12px] text-nowrap top-[79px]">Line Item Information</p>
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[149px] text-[#62748e] text-[12px] text-nowrap top-[79px]">Total Amount Spent</p>
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[272px] text-[#62748e] text-[12px] text-nowrap top-[78px]">Expenditure Period</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[16px] text-[#45556c] text-[12px] text-nowrap top-[79px]">Line Item Information</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[149px] text-[#45556c] text-[12px] text-nowrap top-[79px]">Total Amount Spent</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[272px] text-[#45556c] text-[12px] text-nowrap top-[78px]">Expenditure Period</p>
       <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[24px] left-[17px] text-[#606060] text-[12px] text-nowrap top-[44px]">Origin: DINAGA • Published: Sep 13, 2025</p>
       <Paragraph6 />
       <Paragraph7 />
@@ -525,9 +525,9 @@ function Container8() {
   return (
     <div className="absolute bg-white border border-[#e2e8f0] border-solid h-[186px] left-[calc(50%+1.5px)] rounded-[14px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_-1px_rgba(0,0,0,0.1)] top-[771px] translate-x-[-50%] w-[399px]" data-name="Container">
       <p className="absolute font-['Source_Sans_3:Medium',sans-serif] font-medium leading-[24px] left-[16px] text-[#0f172b] text-[20px] text-nowrap top-[20px]">Leadership Training Camp</p>
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[15px] text-[#62748e] text-[12px] text-nowrap top-[79px]">Line Item Information</p>
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[148px] text-[#62748e] text-[12px] text-nowrap top-[79px]">Total Amount Spent</p>
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[271px] text-[#62748e] text-[12px] text-nowrap top-[78px]">Expenditure Period</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[15px] text-[#45556c] text-[12px] text-nowrap top-[79px]">Line Item Information</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[148px] text-[#45556c] text-[12px] text-nowrap top-[79px]">Total Amount Spent</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[271px] text-[#45556c] text-[12px] text-nowrap top-[78px]">Expenditure Period</p>
       <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[24px] left-[16px] text-[#606060] text-[12px] text-nowrap top-[44px]">Origin: SAN FELIPE • Published: Sep 13, 2025</p>
       <Paragraph9 />
       <Paragraph10 />
@@ -584,9 +584,9 @@ function Container9() {
   return (
     <div className="absolute bg-white border border-[#e2e8f0] border-solid h-[186px] left-[calc(50%+1.5px)] rounded-[14px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_-1px_rgba(0,0,0,0.1)] top-[985px] translate-x-[-50%] w-[399px]" data-name="Container">
       <p className="absolute font-['Source_Sans_3:Medium',sans-serif] font-medium leading-[24px] left-[17px] text-[#0f172b] text-[20px] text-nowrap top-[20px]">Inter-Barangay Sports League</p>
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[16px] text-[#62748e] text-[12px] text-nowrap top-[79px]">Line Item Information</p>
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[149px] text-[#62748e] text-[12px] text-nowrap top-[79px]">Total Amount Spent</p>
-      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[272px] text-[#62748e] text-[12px] text-nowrap top-[78px]">Expenditure Period</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[16px] text-[#45556c] text-[12px] text-nowrap top-[79px]">Line Item Information</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[149px] text-[#45556c] text-[12px] text-nowrap top-[79px]">Total Amount Spent</p>
+      <p className="absolute font-['Source_Sans_3:Bold',sans-serif] font-bold leading-[24px] left-[272px] text-[#45556c] text-[12px] text-nowrap top-[78px]">Expenditure Period</p>
       <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[24px] left-[17px] text-[#606060] text-[12px] text-nowrap top-[44px]">Origin: BALATAS • Published: Sep 13, 2025</p>
       <Paragraph12 />
       <Paragraph13 />
@@ -688,7 +688,7 @@ function Icon7() {
       <div className="absolute bottom-1/4 left-[37.5%] right-[37.5%] top-1/4" data-name="Vector">
         <div className="absolute inset-[-8.33%_-16.67%]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 5.33333 9.33333">
-            <path d={svgPaths.p2ab2d800} id="Vector" stroke="var(--stroke-0, #45556C)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
+            <path d={svgPaths.p2ab2d800} id="Vector" stroke="var(--stroke-0, #45556c)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
           </svg>
         </div>
       </div>
@@ -782,7 +782,7 @@ function Icon8() {
       <div className="absolute bottom-1/4 left-[37.5%] right-[37.5%] top-1/4" data-name="Vector">
         <div className="absolute inset-[-8.33%_-16.67%]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 5.33333 9.33333">
-            <path d={svgPaths.p3ec8f700} id="Vector" stroke="var(--stroke-0, #45556C)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
+            <path d={svgPaths.p3ec8f700} id="Vector" stroke="var(--stroke-0, #45556c)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
           </svg>
         </div>
       </div>

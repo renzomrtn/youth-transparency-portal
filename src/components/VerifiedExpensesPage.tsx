@@ -157,7 +157,7 @@ export default function VerifiedExpensesPage({
                     {/* Details Grid */}
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-[24px]">
                       <div>
-                        <h3 className="font-['Source_Sans_3:Bold',sans-serif] leading-[20px] text-[#62748e] text-[14px] lg:text-[16px] mb-[8px]">
+                        <h3 className="font-['Source_Sans_3:Bold',sans-serif] leading-[20px] text-[#45556c] text-[14px] lg:text-[16px] mb-[8px]">
                           Line Item Information
                         </h3>
                         <p className="font-['Source_Sans_3:Regular',sans-serif] leading-[20px] text-[#0f172b] text-[14px] lg:text-[16px] mb-[8px]">
@@ -172,7 +172,7 @@ export default function VerifiedExpensesPage({
                       </div>
 
                       <div>
-                        <h3 className="font-['Source_Sans_3:Bold',sans-serif] leading-[20px] text-[#62748e] text-[14px] lg:text-[16px] mb-[8px]">
+                        <h3 className="font-['Source_Sans_3:Bold',sans-serif] leading-[20px] text-[#45556c] text-[14px] lg:text-[16px] mb-[8px]">
                           Total Amount Spent
                         </h3>
                         <p 
@@ -193,7 +193,7 @@ export default function VerifiedExpensesPage({
                       </div>
 
                       <div>
-                        <h3 className="font-['Source_Sans_3:Bold',sans-serif] leading-[20px] text-[#62748e] text-[14px] lg:text-[16px] mb-[8px]">
+                        <h3 className="font-['Source_Sans_3:Bold',sans-serif] leading-[20px] text-[#45556c] text-[14px] lg:text-[16px] mb-[8px]">
                           Expenditure Period
                         </h3>
                         <p className="font-['Source_Sans_3:Regular',sans-serif] leading-[20px] text-[#0f172b] text-[14px] lg:text-[16px]">

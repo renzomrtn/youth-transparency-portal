@@ -138,7 +138,7 @@ function Paragraph() {
       className="content-stretch flex h-[20px] items-start relative shrink-0 w-full"
       data-name="Paragraph"
     >
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">
         Line Item Information
       </p>
     </div>
@@ -213,7 +213,7 @@ function Paragraph4() {
       className="content-stretch flex h-[20px] items-start relative shrink-0 w-full"
       data-name="Paragraph"
     >
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">
         Total Amount Spent
       </p>
     </div>
@@ -249,7 +249,7 @@ function Paragraph6() {
       className="absolute content-stretch flex h-[20px] items-start left-0 top-0 w-[272.656px]"
       data-name="Paragraph"
     >
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">
         Expenditure Period
       </p>
     </div>
@@ -479,7 +479,7 @@ function Paragraph10() {
       className="content-stretch flex h-[20px] items-start relative shrink-0 w-full"
       data-name="Paragraph"
     >
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">
         Line Item Information
       </p>
     </div>
@@ -554,7 +554,7 @@ function Paragraph14() {
       className="content-stretch flex h-[20px] items-start relative shrink-0 w-full"
       data-name="Paragraph"
     >
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">
         Total Amount Spent
       </p>
     </div>
@@ -590,7 +590,7 @@ function Paragraph16() {
       className="absolute content-stretch flex h-[20px] items-start left-0 top-0 w-[272.656px]"
       data-name="Paragraph"
     >
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">
         Expenditure Period
       </p>
     </div>
@@ -820,7 +820,7 @@ function Paragraph20() {
       className="content-stretch flex h-[20px] items-start relative shrink-0 w-full"
       data-name="Paragraph"
     >
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">
         Line Item Information
       </p>
     </div>
@@ -895,7 +895,7 @@ function Paragraph24() {
       className="content-stretch flex h-[20px] items-start relative shrink-0 w-full"
       data-name="Paragraph"
     >
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">
         Total Amount Spent
       </p>
     </div>
@@ -931,7 +931,7 @@ function Paragraph26() {
       className="absolute content-stretch flex h-[20px] items-start left-0 top-0 w-[272.656px]"
       data-name="Paragraph"
     >
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">
         Expenditure Period
       </p>
     </div>
@@ -1161,7 +1161,7 @@ function Paragraph30() {
       className="content-stretch flex h-[20px] items-start relative shrink-0 w-full"
       data-name="Paragraph"
     >
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">
         Line Item Information
       </p>
     </div>
@@ -1234,7 +1234,7 @@ function Paragraph34() {
       className="content-stretch flex h-[20px] items-start relative shrink-0 w-full"
       data-name="Paragraph"
     >
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">
         Total Amount Spent
       </p>
     </div>
@@ -1270,7 +1270,7 @@ function Paragraph36() {
       className="absolute content-stretch flex h-[20px] items-start left-0 top-0 w-[272.656px]"
       data-name="Paragraph"
     >
-      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#62748e] text-[14px]">
+      <p className="basis-0 font-['Source_Sans_3:Bold',sans-serif] font-bold grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#45556c] text-[14px]">
         Expenditure Period
       </p>
     </div>
@@ -1853,7 +1853,7 @@ function Icon5() {
             <path
               d={svgPaths.p2ab2d800}
               id="Vector"
-              stroke="var(--stroke-0, #45556C)"
+              stroke="var(--stroke-0, #45556c)"
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="1.33333"
@@ -2003,7 +2003,7 @@ function Icon6() {
             <path
               d={svgPaths.p3ec8f700}
               id="Vector"
-              stroke="var(--stroke-0, #45556C)"
+              stroke="var(--stroke-0, #45556c)"
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="1.33333"

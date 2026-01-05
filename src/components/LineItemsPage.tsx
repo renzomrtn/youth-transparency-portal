@@ -99,7 +99,7 @@ export default function LineItemsPage({ onNavigate }: LineItemsPageProps) {
               {/* Details Grid */}
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-[24px]">
                 <div>
-                  <h3 className="font-['Source_Sans_3:Bold',sans-serif] leading-[20px] text-[#62748e] text-[14px] lg:text-[16px] mb-[8px]">
+                  <h3 className="font-['Source_Sans_3:Bold',sans-serif] leading-[20px] text-[#45556c] text-[14px] lg:text-[16px] mb-[8px]">
                     Line Item Information
                   </h3>
                   <p className="font-['Source_Sans_3:Regular',sans-serif] leading-[20px] text-[#0f172b] text-[14px] lg:text-[16px] mb-[8px]">
@@ -111,7 +111,7 @@ export default function LineItemsPage({ onNavigate }: LineItemsPageProps) {
                 </div>
 
                 <div>
-                  <h3 className="font-['Source_Sans_3:Bold',sans-serif] leading-[20px] text-[#62748e] text-[14px] lg:text-[16px] mb-[8px]">
+                  <h3 className="font-['Source_Sans_3:Bold',sans-serif] leading-[20px] text-[#45556c] text-[14px] lg:text-[16px] mb-[8px]">
                     Budget
                   </h3>
                   <p className="font-['Source_Sans_3:Regular',sans-serif] leading-[20px] text-[#101828] text-[14px] lg:text-[16px]">
@@ -120,7 +120,7 @@ export default function LineItemsPage({ onNavigate }: LineItemsPageProps) {
                 </div>
 
                 <div>
-                  <h3 className="font-['Source_Sans_3:Bold',sans-serif] leading-[20px] text-[#62748e] text-[14px] lg:text-[16px] mb-[8px]">
+                  <h3 className="font-['Source_Sans_3:Bold',sans-serif] leading-[20px] text-[#45556c] text-[14px] lg:text-[16px] mb-[8px]">
                     Implementation Date
                   </h3>
                   <p className="font-['Source_Sans_3:Regular',sans-serif] leading-[20px] text-[#0f172b] text-[14px] lg:text-[16px]">

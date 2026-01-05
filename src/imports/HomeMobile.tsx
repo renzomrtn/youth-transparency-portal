@@ -383,7 +383,7 @@ function Heading3() {
 function Paragraph3() {
   return (
     <div className="absolute h-[24px] left-[54px] top-[19px] w-[36px]" data-name="Paragraph">
-      <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[24px] left-0 text-[#62748e] text-[14px] text-nowrap top-0">Origin</p>
+      <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[24px] left-0 text-[#45556c] text-[14px] text-nowrap top-0">Origin</p>
     </div>
   );
 }
@@ -442,7 +442,7 @@ function Heading4() {
 function Paragraph4() {
   return (
     <div className="absolute h-[24px] left-[54px] top-[19px] w-[36px]" data-name="Paragraph">
-      <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[24px] left-0 text-[#62748e] text-[14px] text-nowrap top-0">Annual Budget</p>
+      <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[24px] left-0 text-[#45556c] text-[14px] text-nowrap top-0">Annual Budget</p>
     </div>
   );
 }
@@ -517,7 +517,7 @@ function Heading5() {
 function Paragraph5() {
   return (
     <div className="absolute h-[24px] left-[54px] top-[19px] w-[36px]" data-name="Paragraph">
-      <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[24px] left-0 text-[#62748e] text-[14px] text-nowrap top-0">Line Items</p>
+      <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[24px] left-0 text-[#45556c] text-[14px] text-nowrap top-0">Line Items</p>
     </div>
   );
 }
@@ -591,7 +591,7 @@ function Heading6() {
 function Paragraph6() {
   return (
     <div className="absolute h-[24px] left-[54px] top-[19px] w-[36px]" data-name="Paragraph">
-      <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[24px] left-0 text-[#62748e] text-[14px] text-nowrap top-0">Verified Expenses</p>
+      <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[24px] left-0 text-[#45556c] text-[14px] text-nowrap top-0">Verified Expenses</p>
     </div>
   );
 }
@@ -665,7 +665,7 @@ function Heading7() {
 function Paragraph7() {
   return (
     <div className="absolute h-[24px] left-[54px] top-[19px] w-[36px]" data-name="Paragraph">
-      <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[24px] left-0 text-[#62748e] text-[14px] text-nowrap top-0">Documents</p>
+      <p className="absolute font-['Source_Sans_3:Regular',sans-serif] font-normal leading-[24px] left-0 text-[#45556c] text-[14px] text-nowrap top-0">Documents</p>
     </div>
   );
 }
@@ -736,7 +736,7 @@ function Heading8() {
 function Paragraph8() {
   return (
     <div className="absolute h-[24px] left-[20px] top-[51px] w-[197px]" data-name="Paragraph">
-      <div className="absolute font-['Source_Sans_3:Regular','Noto_Sans:Regular',sans-serif] font-normal h-[19px] leading-[24px] left-0 text-[#62748e] text-[14px] top-0 w-[197px]">
+      <div className="absolute font-['Source_Sans_3:Regular','Noto_Sans:Regular',sans-serif] font-normal h-[19px] leading-[24px] left-0 text-[#45556c] text-[14px] top-0 w-[197px]">
         <p className="mb-0">{`SK Federation • Verified Expenses `}</p>
         <p>&nbsp;</p>
       </div>
@@ -768,7 +768,7 @@ function Heading9() {
 function Paragraph9() {
   return (
     <div className="absolute h-[24px] left-[20px] top-[51px] w-[197px]" data-name="Paragraph">
-      <div className="absolute font-['Source_Sans_3:Regular','Noto_Sans:Regular',sans-serif] font-normal h-[19px] leading-[24px] left-0 text-[#62748e] text-[14px] top-0 w-[197px]">
+      <div className="absolute font-['Source_Sans_3:Regular','Noto_Sans:Regular',sans-serif] font-normal h-[19px] leading-[24px] left-0 text-[#45556c] text-[14px] top-0 w-[197px]">
         <p className="mb-0">{`SK Federation • Verified Expenses `}</p>
         <p>&nbsp;</p>
       </div>
@@ -800,7 +800,7 @@ function Heading10() {
 function Paragraph10() {
   return (
     <div className="absolute h-[24px] left-[20px] top-[51px] w-[197px]" data-name="Paragraph">
-      <div className="absolute font-['Source_Sans_3:Regular','Noto_Sans:Regular',sans-serif] font-normal h-[19px] leading-[24px] left-0 text-[#62748e] text-[14px] top-0 w-[197px]">
+      <div className="absolute font-['Source_Sans_3:Regular','Noto_Sans:Regular',sans-serif] font-normal h-[19px] leading-[24px] left-0 text-[#45556c] text-[14px] top-0 w-[197px]">
         <p className="mb-0">{`SK Federation • Verified Expenses `}</p>
         <p>&nbsp;</p>
       </div>

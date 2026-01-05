@@ -56,7 +56,7 @@ export default function ArchivesPage({ onNavigate }: ArchivesPageProps) {
           {archives.map((archive) => (
             <div key={archive.id} className="bg-white rounded-[14px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_-1px_rgba(0,0,0,0.1)] border border-[#e2e8f0] p-4 lg:p-[32px]">
               <div className="mb-[8px]">
-                <p className="font-['Source_Sans_3:Regular',sans-serif] leading-[20px] text-[#62748e] text-[14px] lg:text-[16px]">
+                <p className="font-['Source_Sans_3:Regular',sans-serif] leading-[20px] text-[#45556c] text-[14px] lg:text-[16px]">
                   <span className="font-['Source_Sans_3:Bold',sans-serif]">Author:</span> {archive.author}
                 </p>
               </div>
@@ -76,7 +76,7 @@ export default function ArchivesPage({ onNavigate }: ArchivesPageProps) {
               </div>
 
               <div>
-                <h3 className="font-['Source_Sans_3:Bold',sans-serif] leading-[20px] text-[#62748e] text-[14px] lg:text-[16px] mb-[12px]">
+                <h3 className="font-['Source_Sans_3:Bold',sans-serif] leading-[20px] text-[#45556c] text-[14px] lg:text-[16px] mb-[12px]">
                   Actions
                 </h3>
                 <div className="flex gap-[16px]">
