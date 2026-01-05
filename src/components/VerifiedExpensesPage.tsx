@@ -58,7 +58,7 @@ export default function VerifiedExpensesPage({
   if (isLoading) {
     return (
       <PageLayout currentPage="verified-expenses" onNavigate={onNavigate}>
-        <div className="max-w-[900px]">
+        <main className="max-w-[900px]">
           <h1 className="font-['Source_Sans_3:Bold',sans-serif] leading-tight text-[#0f172b] text-[28px] lg:text-[42px] mb-6 lg:mb-[32px]">
             VERIFIED EXPENSES
           </h1>
@@ -67,7 +67,7 @@ export default function VerifiedExpensesPage({
               Loading verified expenses...
             </p>
           </div>
-        </div>
+        </main>
       </PageLayout>
     );
   }
@@ -75,7 +75,7 @@ export default function VerifiedExpensesPage({
   if (error) {
     return (
       <PageLayout currentPage="verified-expenses" onNavigate={onNavigate}>
-        <div className="max-w-[900px]">
+        <main className="max-w-[900px]">
           <h1 className="font-['Source_Sans_3:Bold',sans-serif] leading-tight text-[#0f172b] text-[28px] lg:text-[42px] mb-6 lg:mb-[32px]">
             VERIFIED EXPENSES
           </h1>
@@ -84,7 +84,7 @@ export default function VerifiedExpensesPage({
               Error: {error}
             </p>
           </div>
-        </div>
+        </main>
       </PageLayout>
     );
   }
@@ -92,7 +92,8 @@ export default function VerifiedExpensesPage({
   return (
     <>
       <PageLayout currentPage="verified-expenses" onNavigate={onNavigate}>
-        <div className="max-w-[900px]">
+        {/* Main Landmark Start */}
+        <main className="max-w-[900px]">
           <h1 className="font-['Source_Sans_3:Bold',sans-serif] leading-tight text-[#0f172b] text-[28px] lg:text-[42px] mb-6 lg:mb-[32px]">
             VERIFIED EXPENSES
           </h1>
@@ -109,14 +110,15 @@ export default function VerifiedExpensesPage({
                 const isOverBudget = Number(expense.totalAmount) > Number(expense.budget);
                 
                 return (
-                  <div
+                  <section
                     key={expense.id}
+                    aria-labelledby={`expense-title-${expense.id}`}
                     className="bg-white rounded-[14px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_-1px_rgba(0,0,0,0.1)] border border-[#e2e8f0] p-4 lg:p-[25px]"
                   >
-                   {/* Header */}
+                    {/* Header */}
                     <div className="flex items-start justify-between mb-4 lg:mb-[16px] gap-2">
                       <div className="flex-1 min-w-0">
-                        <h2 className="font-['Source_Sans_3:Bold',sans-serif] leading-tight text-[#0f172b] text-[20px] lg:text-[28px] mb-[8px]">
+                        <h2 id={`expense-title-${expense.id}`} className="font-['Source_Sans_3:Bold',sans-serif] leading-tight text-[#0f172b] text-[20px] lg:text-[28px] mb-[8px]">
                           {getLineItemName(expense.lineItem)}
                         </h2>
                         <div className="flex flex-col lg:flex-row lg:gap-[12px] lg:items-center gap-1">
@@ -132,7 +134,6 @@ export default function VerifiedExpensesPage({
                         </div>
                       </div>
 
-                      {/* UPDATED: Container for Arrow + "See more" Label */}
                       <div className="flex flex-col items-center gap-1">
                         <button
                           onClick={() => setSelectedExpenseId(expense.id)}
@@ -149,11 +150,11 @@ export default function VerifiedExpensesPage({
                           </svg>
                         </button>
                         <span 
-                        style={{ color: '#155DFC' }} 
-                        className="font-bold text-[12px] lg:text-[16px] whitespace-nowrap"
-                      >
-                        Full Details
-                      </span>
+                          style={{ color: '#155DFC' }} 
+                          className="font-bold text-[12px] lg:text-[16px] whitespace-nowrap"
+                        >
+                          Full Details
+                        </span>
                       </div>
                     </div>
 
@@ -187,7 +188,6 @@ export default function VerifiedExpensesPage({
                         >
                           {formatCurrency(expense.totalAmount)}
                         </p>
-                        {/* UPDATED: Added "Exceeds Budget" message directly under the amount */}
                         {isOverBudget && (
                           <p className="text-[#dc2626] text-[14px] font-bold mt-1 tracking-tight">
                             Exceeds Budget
@@ -207,12 +207,12 @@ export default function VerifiedExpensesPage({
                         </p>
                       </div>
                     </div>
-                  </div>
+                  </section>
                 );
               })}
             </div>
           )}
-        </div>
+        </main>
       </PageLayout>
 
       {selectedExpense && (
