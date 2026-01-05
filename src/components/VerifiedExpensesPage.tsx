@@ -148,9 +148,12 @@ export default function VerifiedExpensesPage({
                             <path d={svgPaths.pbe2c300} fill="#155DFC" />
                           </svg>
                         </button>
-                        <span className="font-['Source_Sans_3:Regular',sans-serif] text-[#155DFC] text-[12px] lg:text-[14px] whitespace-nowrap bold">
-                          See more
-                        </span>
+                        <span 
+                        style={{ color: '#155DFC' }} 
+                        className="font-bold text-[12px] lg:text-[16px] whitespace-nowrap"
+                      >
+                        Full Details
+                      </span>
                       </div>
                     </div>
 

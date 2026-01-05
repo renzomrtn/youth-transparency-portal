@@ -59,45 +59,67 @@ export default function HomePage({ onNavigate }: HomePageProps) {
           <div className="w-full max-w-[1546px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-6 -mt-12 lg:-mt-20">
             
             {/* Origin Card with Dropdown */}
-            <div ref={dropdownRef} className="relative bg-white rounded-[16px] shadow-xl border border-[#f1f5f9]">
-              <div className="flex flex-col gap-4 p-5 lg:p-6">
-                <div className="flex items-center justify-between">
-                  <button 
-                    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    aria-label="Toggle origin selection menu" 
-                    aria-expanded={isDropdownOpen}
-                    aria-haspopup="listbox"
-                    className="rounded-[14px] size-12 flex items-center justify-center hover:opacity-90 transition-all shadow-sm" 
-                    style={{ backgroundImage: "linear-gradient(135deg, rgb(173, 70, 255) 0%, rgb(152, 16, 250) 100%)" }}
-                  >
-                    <svg className={`size-6 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24">
-                      <path d="M6 9L12 15L18 9" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
-                    </svg>
-                  </button>
-                  <span className="bg-[#faf5ff] px-3 py-1 rounded-full text-[#8200db] text-[12px] font-bold">Active</span>
-                </div>
-                <div className="overflow-hidden">
-                  <p className="font-bold text-[#0f172b] text-[16px] lg:text-[18px] truncate" title={stats.name}>
-                    {stats.name.toUpperCase()}
-                  </p>
-                  <p className="text-[#45556c] text-[14px]">Origin</p>
-                </div>
-              </div>
+<div ref={dropdownRef} className="relative bg-white rounded-[16px] shadow-xl border border-[#f1f5f9]">
+  <div className="flex flex-col gap-4 p-5 lg:p-6">
+    <div className="flex items-center justify-between">
+      {/* Static Icon (Matches others) */}
+      <div 
+        className="rounded-[14px] size-12 flex items-center justify-center shadow-sm" 
+        style={{ backgroundImage: "linear-gradient(135deg, rgb(173, 70, 255) 0%, rgb(152, 16, 250) 100%)" }}
+      >
+        <svg className="size-6" fill="none" viewBox="0 0 24 24" stroke="white">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+      </div>
+      <span className="bg-[#faf5ff] px-3 py-1 rounded-full text-[#8200db] text-[12px] font-bold border border-purple-100">Active</span>
+    </div>
 
-              {isDropdownOpen && (
-                <div className="absolute top-full mt-2 left-0 w-full bg-white rounded-[16px] shadow-2xl border border-[#f1f5f9] z-[120] max-h-[300px] overflow-y-auto">
-                  {origins.map((origin) => (
-                    <button
-                      key={origin.value}
-                      onClick={() => { setSelectedOrigin(origin.value); setIsDropdownOpen(false); }}
-                      className="w-full px-5 py-3 text-left hover:bg-gray-50 border-b border-gray-50 last:border-0 text-[14px] transition-colors"
-                    >
-                      {origin.label}
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
+    {/* OBVIOUS INTERACTIVE TRIGGER */}
+    <button 
+      onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+      className={`
+        flex items-center justify-between w-full p-3 -m-3 rounded-xl transition-all
+        ${isDropdownOpen ? 'bg-purple-50 ring-2 ring-purple-200' : 'hover:bg-gray-50'}
+      `}
+      aria-label="Toggle origin selection menu" 
+    >
+      <div className="overflow-hidden">
+        <div className="flex items-center gap-2">
+          <p className="font-bold text-[#0f172b] text-[16px] lg:text-[18px] truncate">
+            {stats.name.toUpperCase()}
+          </p>
+        </div>
+        <p className="text-[#45556c] text-[14px] text-left">Origin</p>
+      </div>
+
+      {/* High-Contrast Chevron Circle */}
+      <div className={`
+        flex items-center justify-center size-8 rounded-full transition-all
+        ${isDropdownOpen ? 'bg-[#8200db] text-white rotate-180' : 'bg-gray-100 text-[#45556c]'}
+      `}>
+        <svg className="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path d="M19 9l-7 7-7-7" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </div>
+    </button>
+  </div>
+
+  {/* Dropdown Menu */}
+  {isDropdownOpen && (
+    <div className="absolute top-full mt-2 left-0 w-full bg-white rounded-[16px] shadow-2xl border border-purple-100 z-[120] max-h-[300px] overflow-y-auto animate-in fade-in slide-in-from-top-2">
+      {origins.map((origin) => (
+        <button
+          key={origin.value}
+          onClick={() => { setSelectedOrigin(origin.value); setIsDropdownOpen(false); }}
+          className="w-full px-5 py-3 text-left hover:bg-purple-50 hover:text-[#8200db] border-b border-gray-50 last:border-0 text-[14px] transition-colors"
+        >
+          {origin.label}
+        </button>
+      ))}
+    </div>
+  )}
+</div>
 
             {/* Annual Budget Card */}
             <StatCard 
