@@ -113,7 +113,7 @@ export default function VerifiedExpensesPage({
                     key={expense.id}
                     className="bg-white rounded-[14px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_-1px_rgba(0,0,0,0.1)] border border-[#e2e8f0] p-4 lg:p-[25px]"
                   >
-                    {/* Header */}
+                   {/* Header */}
                     <div className="flex items-start justify-between mb-4 lg:mb-[16px] gap-2">
                       <div className="flex-1 min-w-0">
                         <h2 className="font-['Source_Sans_3:Bold',sans-serif] leading-tight text-[#0f172b] text-[20px] lg:text-[28px] mb-[8px]">
@@ -131,20 +131,27 @@ export default function VerifiedExpensesPage({
                           </p>
                         </div>
                       </div>
-                      <button
-                        onClick={() => setSelectedExpenseId(expense.id)}
-                        aria-label={`View details for ${getLineItemName(expense.lineItem)}`}
-                        className="flex items-center justify-center size-[32px] lg:size-[36px] cursor-pointer hover:opacity-70 transition-opacity flex-shrink-0"
-                      >
-                        <svg
-                          className="block size-[24px] lg:size-[28px]"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          aria-hidden="true"
+
+                      {/* UPDATED: Container for Arrow + "See more" Label */}
+                      <div className="flex flex-col items-center gap-1">
+                        <button
+                          onClick={() => setSelectedExpenseId(expense.id)}
+                          aria-label={`View details for ${getLineItemName(expense.lineItem)}`}
+                          className="flex items-center justify-center size-[32px] lg:size-[36px] cursor-pointer hover:opacity-70 transition-opacity flex-shrink-0"
                         >
-                          <path d={svgPaths.pbe2c300} fill="#155DFC" />
-                        </svg>
-                      </button>
+                          <svg
+                            className="block size-[24px] lg:size-[28px]"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                          >
+                            <path d={svgPaths.pbe2c300} fill="#155DFC" />
+                          </svg>
+                        </button>
+                        <span className="font-['Source_Sans_3:Regular',sans-serif] text-[#155DFC] text-[12px] lg:text-[14px] whitespace-nowrap bold">
+                          See more
+                        </span>
+                      </div>
                     </div>
 
                     {/* Details Grid */}
