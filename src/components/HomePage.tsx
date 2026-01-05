@@ -64,6 +64,9 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                 <div className="flex items-center justify-between">
                   <button 
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                    aria-label="Toggle origin selection menu" 
+                    aria-expanded={isDropdownOpen}
+                    aria-haspopup="listbox"
                     className="rounded-[14px] size-12 flex items-center justify-center hover:opacity-90 transition-all shadow-sm" 
                     style={{ backgroundImage: "linear-gradient(135deg, rgb(173, 70, 255) 0%, rgb(152, 16, 250) 100%)" }}
                   >
