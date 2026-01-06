@@ -1,16 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import HomePage from "./components/HomePage";
 import VerifiedExpensesPage from "./components/VerifiedExpensesPage";
 import LineItemsPage from "./components/LineItemsPage";
 import ArchivesPage from "./components/ArchivesPage";
 
-// 1. Import the Provider
 import { ExpenseVerificationProvider } from "./contexts/ExpenseVerificationContext";
 
 type Page = "home" | "verified-expenses" | "line-items" | "archives";
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<Page>("home");
+  const [currentPage, setCurrentPage] = useState<Page>(() => {
+    return (localStorage.getItem("currentPage") as Page) || "home";
+  });
+
+  useEffect(() => {
+    localStorage.setItem("currentPage", currentPage);
+  }, [currentPage]);
 
   const renderPage = () => {
     switch (currentPage) {
@@ -28,7 +33,6 @@ export default function App() {
   };
 
   return (
-    // 2. Wrap the entire app structure
     <ExpenseVerificationProvider>
       <div className="min-h-screen w-full">
         {renderPage()}
